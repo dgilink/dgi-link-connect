@@ -804,14 +804,14 @@ function ProductShowcase() {
           className="group mt-8 animate-dgi-float rounded-3xl border border-border bg-white px-3 py-4 shadow-[0_10px_40px_-20px_rgba(15,45,104,0.35)] transition-all hover:-translate-y-1 hover:border-[color:var(--brand-cyan)]"
           style={{ animationDelay: "0s" }}
         >
-          <div className="mx-auto flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl bg-white">
+          <div className="mx-auto flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl bg-white p-5 sm:p-6">
             <img
               src={cardscanIconAsset.url}
               alt="CardScan AI 앱 아이콘"
               width={160}
               height={160}
               loading="eager"
-              className="block h-full w-full rounded-2xl object-cover"
+              className="block h-full w-full rounded-2xl object-contain"
             />
           </div>
           <div className="mt-3 text-center">
