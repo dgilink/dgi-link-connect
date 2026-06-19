@@ -758,14 +758,16 @@ function ProductShowcase() {
           className="group animate-dgi-float rounded-3xl border border-border bg-white p-5 shadow-[0_10px_40px_-20px_rgba(15,45,104,0.35)] transition-all hover:-translate-y-1 hover:border-[color:var(--brand-cyan)]"
           style={{ animationDelay: "0s" }}
         >
-          <img
-            src={cardscanIconAsset.url}
-            alt="CardScan AI 앱 아이콘"
-            width={120}
-            height={120}
-            loading="eager"
-            className="mx-auto block h-[120px] w-[120px] rounded-2xl"
-          />
+          <div className="mx-auto flex h-[120px] w-[120px] items-center justify-center overflow-hidden rounded-2xl bg-[#08152e]">
+            <img
+              src={cardscanIconAsset.url}
+              alt="CardScan AI 앱 아이콘"
+              width={120}
+              height={120}
+              loading="eager"
+              className="block h-[120px] w-[120px] rounded-2xl"
+            />
+          </div>
           <div className="mt-4 text-center">
             <div className="text-[11px] font-semibold uppercase tracking-wider text-[color:var(--brand-cyan)]">CardScan AI</div>
             <div className="mt-1 text-xs text-muted-foreground">Business contacts</div>
