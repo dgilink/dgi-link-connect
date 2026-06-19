@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -15,11 +15,10 @@ export const Route = createFileRoute("/")({
 
 type Lang = "ko" | "en" | "ja";
 
-const heroCopy: Record<Lang, { badge: string; line1: string; line2: string; accent: string; subtitle: string; cta1: string; cta2: string; nav: string[] }> = {
+const heroCopy: Record<Lang, { badge: string; line1: string; accent: string; subtitle: string; cta1: string; cta2: string; nav: string[] }> = {
   ko: {
     badge: "글로벌 디지털 인텔리전스",
     line1: "흩어진 것을",
-    line2: "",
     accent: "연결합니다.",
     subtitle:
       "데이터, 그린 산업, AI 지능으로 현장의 흩어진 정보를 연결해 사람의 시간과 기회를 돌려주는 브랜드입니다.",
@@ -30,7 +29,6 @@ const heroCopy: Record<Lang, { badge: string; line1: string; line2: string; acce
   en: {
     badge: "Global Digital Intelligence",
     line1: "Connecting what's",
-    line2: "",
     accent: "scattered.",
     subtitle:
       "We connect scattered field information through data, green industries, and AI — giving people back their time and opportunities.",
@@ -41,7 +39,6 @@ const heroCopy: Record<Lang, { badge: string; line1: string; line2: string; acce
   ja: {
     badge: "グローバル・デジタル・インテリジェンス",
     line1: "散らばったものを、",
-    line2: "",
     accent: "つなぎます。",
     subtitle:
       "データ、グリーン産業、AI知能で現場に散らばった情報をつなぎ、人の時間と機会を取り戻すブランドです。",
