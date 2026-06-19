@@ -618,7 +618,10 @@ function Index() {
               <div>
                 <div className="flex items-center gap-2">
                   <LogoMark />
-                  <span className="font-display text-base font-bold text-[color:var(--navy)]">DGI Link</span>
+                  <span className="font-display text-lg font-extrabold tracking-tight">
+                    <span className="text-[color:var(--navy-deep)]">DGI</span>
+                    <span className="bg-gradient-to-r from-[color:var(--brand-cyan)] to-[color:var(--brand-green)] bg-clip-text text-transparent"> Link</span>
+                  </span>
                 </div>
                 <p className="mt-3 max-w-xs text-sm text-muted-foreground">{t.footer.tagline}</p>
               </div>
