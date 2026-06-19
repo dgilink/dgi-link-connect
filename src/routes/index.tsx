@@ -58,9 +58,9 @@ const T = {
     nav: { home: "Home", services: "Services", about: "About", contact: "Contact" },
     hero: {
       eyebrow: "Data · Green · Intelligence",
-      title: ["흩어진 것을 ", "연결", "합니다."] as const,
+      title: ["흩어진 것을 ", "연결", "합니다."] as readonly string[],
       desc:
-        ["DGI Link", "는 현장에 흩어진 정보와 사람을 ", "데이터", "와 ", "AI", "로 연결해 더 간단하고 효율적인 경험을 만듭니다."] as const,
+        ["DGI Link", "는 현장에 흩어진 정보와 사람을 ", "데이터", "와 ", "AI", "로 연결해 더 간단하고 효율적인 경험을 만듭니다."] as readonly string[],
       ctaPrimary: "서비스 살펴보기",
       ctaSecondary: "브랜드 이야기",
     },
@@ -150,9 +150,9 @@ const T = {
     nav: { home: "Home", services: "Services", about: "About", contact: "Contact" },
     hero: {
       eyebrow: "Data · Green · Intelligence",
-      title: ["Connecting ", "What's", " Scattered."] as const,
+      title: ["Connecting ", "What's", " Scattered."] as readonly string[],
       desc:
-        ["DGI Link", " connects scattered information and people on the ground through ", "data", " and ", "AI", " — for simpler, more efficient work."] as const,
+        ["DGI Link", " connects scattered information and people on the ground through ", "data", " and ", "AI", " — for simpler, more efficient work."] as readonly string[],
       ctaPrimary: "Explore services",
       ctaSecondary: "Our story",
     },
@@ -244,9 +244,9 @@ const T = {
     nav: { home: "Home", services: "Services", about: "About", contact: "Contact" },
     hero: {
       eyebrow: "Data · Green · Intelligence",
-      title: ["散らばったものを、", "つなぐ", "。"] as const,
+      title: ["散らばったものを、", "つなぐ", "。"] as readonly string[],
       desc:
-        ["DGI Link", "は、現場に散らばった情報と人を", "データ", "と", "AI", "でつなぎ、よりシンプルで効率的な体験をつくります。"] as const,
+        ["DGI Link", "は、現場に散らばった情報と人を", "データ", "と", "AI", "でつなぎ、よりシンプルで効率的な体験をつくります。"] as readonly string[],
       ctaPrimary: "サービスを見る",
       ctaSecondary: "ブランドストーリー",
     },
