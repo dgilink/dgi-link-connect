@@ -950,7 +950,7 @@ function FlowCard({ tone, label, steps }: { tone: "navy" | "green"; label: strin
   const text = tone === "navy" ? "text-white" : "text-[color:var(--navy-deep)]";
   const sub = tone === "navy" ? "text-white/65" : "text-muted-foreground";
   return (
-    <div data-reveal className={`dgi-reveal rounded-3xl border border-border bg-gradient-to-br ${bg} p-6 ${text}`}>
+    <div data-reveal className={`dgi-reveal rounded-3xl border border-border bg-gradient-to-br ${bg} p-7 sm:p-8 ${text}`} style={{ wordBreak: "keep-all" }}>
       <div className={`text-[13px] font-display font-bold tracking-wide`} style={{ color: accent as string }}>
         {label}
       </div>
