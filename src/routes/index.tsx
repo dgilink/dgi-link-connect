@@ -768,50 +768,57 @@ function BackgroundGlow() {
 
 function ProductShowcase() {
   return (
-    <div className="relative mx-auto w-full max-w-md">
+    <div className="relative mx-auto w-full max-w-lg">
+      {/* Connector line between the two cards */}
       <svg
         aria-hidden
-        className="absolute inset-0 h-full w-full"
-        viewBox="0 0 400 360"
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full"
+        viewBox="0 0 400 280"
+        preserveAspectRatio="none"
         fill="none"
       >
         <path
-          d="M110 110 C 180 60, 260 60, 290 250"
-          stroke="url(#g1)"
-          strokeWidth="1.5"
-          strokeDasharray="4 6"
-          style={{ animation: "dgi-dash 1.8s linear infinite" }}
+          d="M150 140 C 200 110, 220 170, 260 140"
+          stroke="url(#dgi-connector)"
+          strokeWidth="3.5"
+          strokeLinecap="round"
+          strokeDasharray="8 8"
+          style={{ animation: "dgi-dash 1.6s linear infinite" }}
         />
+        <circle cx="150" cy="140" r="5" fill="#06B6D4" />
+        <circle cx="260" cy="140" r="5" fill="#36A852" />
         <defs>
-          <linearGradient id="g1" x1="0" x2="1">
+          <linearGradient id="dgi-connector" x1="0" x2="1">
             <stop offset="0" stopColor="#06B6D4" />
             <stop offset="1" stopColor="#36A852" />
           </linearGradient>
         </defs>
       </svg>
 
-      <div className="relative grid grid-cols-2 gap-5">
+      <div className="relative z-10 grid grid-cols-2 gap-3 sm:gap-4">
         <a
           href={CARDSCAN_URL}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="CardScan AI Google Play 페이지 열기"
-          className="group animate-dgi-float rounded-3xl border border-border bg-white p-5 shadow-[0_10px_40px_-20px_rgba(15,45,104,0.35)] transition-all hover:-translate-y-1 hover:border-[color:var(--brand-cyan)]"
+          className="group animate-dgi-float rounded-3xl border border-border bg-white px-3 py-4 shadow-[0_10px_40px_-20px_rgba(15,45,104,0.35)] transition-all hover:-translate-y-1 hover:border-[color:var(--brand-cyan)]"
           style={{ animationDelay: "0s" }}
         >
-          <div className="mx-auto flex h-[120px] w-[120px] items-center justify-center overflow-hidden rounded-2xl bg-[#08152e]">
+          <div className="mx-auto flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl bg-[#08152e]">
             <img
               src={cardscanIconAsset.url}
               alt="CardScan AI 앱 아이콘"
-              width={120}
-              height={120}
+              width={160}
+              height={160}
               loading="eager"
-              className="block h-[120px] w-[120px] rounded-2xl"
+              className="block h-full w-full rounded-2xl object-cover"
             />
           </div>
-          <div className="mt-4 text-center">
-            <div className="text-[12px] font-bold tracking-wider text-[color:var(--navy-deep)]">CardScan<span className="text-[color:var(--brand-orange)]"> AI</span></div>
-            <div className="mt-1 text-xs text-muted-foreground">Business contacts</div>
+          <div className="mt-3 text-center">
+            <div className="text-[13px] font-bold tracking-wide text-[color:var(--navy-deep)]">
+              CardScan<span className="text-[color:var(--brand-orange)]"> AI</span>
+            </div>
+            <div className="mt-0.5 text-xs text-muted-foreground">Business contacts</div>
           </div>
         </a>
 
@@ -820,22 +827,24 @@ function ProductShowcase() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="kFarmAI 사이트 열기"
-          className="group mt-10 animate-dgi-float rounded-3xl border border-border bg-white p-5 shadow-[0_10px_40px_-20px_rgba(54,168,82,0.45)] transition-all hover:-translate-y-1 hover:border-[color:var(--brand-green)]"
+          className="group animate-dgi-float rounded-3xl border border-border bg-white px-3 py-4 shadow-[0_10px_40px_-20px_rgba(54,168,82,0.45)] transition-all hover:-translate-y-1 hover:border-[color:var(--brand-green)]"
           style={{ animationDelay: "1s" }}
         >
-          <div className="flex h-[120px] items-center justify-center rounded-2xl bg-[color:var(--brand-green-soft)] p-3">
+          <div className="flex aspect-square w-full items-center justify-center rounded-2xl bg-[color:var(--brand-green-soft)] p-3">
             <img
               src={kfarmLogoAsset.url}
               alt="kFarmAI logo"
               width={160}
-              height={100}
+              height={160}
               loading="eager"
               className="max-h-full w-full object-contain"
             />
           </div>
-          <div className="mt-4 text-center">
-            <div className="text-[12px] font-bold tracking-wider text-[color:var(--brand-green)]">kFarm<span className="text-[color:var(--brand-orange)]">AI</span></div>
-            <div className="mt-1 text-xs text-muted-foreground">Farm community</div>
+          <div className="mt-3 text-center">
+            <div className="text-[13px] font-bold tracking-wide text-[color:var(--brand-green)]">
+              kFarm<span className="text-[color:var(--brand-orange)]">AI</span>
+            </div>
+            <div className="mt-0.5 text-xs text-muted-foreground">Farm community</div>
           </div>
         </a>
       </div>
