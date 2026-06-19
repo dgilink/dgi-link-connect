@@ -408,7 +408,7 @@ function Index() {
             <LogoMark />
             <span className="font-display text-[20px] font-extrabold tracking-tight">
               <span className="text-[color:var(--navy-deep)]">DGI</span>
-              <span className="text-[color:var(--brand-cyan)]"> Link</span>
+              <span className="text-[color:var(--brand-orange)]"> Link</span>
             </span>
           </a>
 
@@ -477,7 +477,7 @@ function Index() {
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
                 <span className="font-bold text-[color:var(--navy-deep)]">DGI</span>
-                <span className="font-bold text-[color:var(--brand-cyan)]"> Link</span>
+                <span className="font-bold text-[color:var(--brand-orange)]"> Link</span>
                 {t.hero.desc[0].replace(/^DGI Link/, "")}
                 {t.hero.desc[1]}
                 <span className="font-semibold text-[color:var(--brand-cyan)]">{t.hero.desc[2]}</span>
@@ -620,7 +620,7 @@ function Index() {
                   <LogoMark />
                   <span className="font-display text-lg font-extrabold tracking-tight">
                     <span className="text-[color:var(--navy-deep)]">DGI</span>
-                    <span className="text-[color:var(--brand-cyan)]"> Link</span>
+                    <span className="text-[color:var(--brand-orange)]"> Link</span>
                   </span>
                 </div>
                 <p className="mt-3 max-w-xs text-sm text-muted-foreground">{t.footer.tagline}</p>
