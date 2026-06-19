@@ -408,7 +408,7 @@ function Index() {
             <LogoMark />
             <span className="font-display text-[20px] font-extrabold tracking-tight">
               <span className="text-[color:var(--navy-deep)]">DGI</span>
-              <span className="bg-gradient-to-r from-[color:var(--brand-cyan)] to-[color:var(--brand-green)] bg-clip-text text-transparent"> Link</span>
+              <span className="text-[color:var(--brand-cyan)]"> Link</span>
             </span>
           </a>
 
@@ -470,14 +470,14 @@ function Index() {
               </p>
               <h1 className="mt-5 font-display text-[40px] font-extrabold leading-[1.15] tracking-tight text-[color:var(--navy-deep)] sm:text-[56px] lg:text-[64px]">
                 {t.hero.title[0]}
-                <span className="bg-gradient-to-r from-[color:var(--brand-cyan)] to-[color:var(--brand-green)] bg-clip-text text-transparent">
+                <span className="text-[color:var(--brand-cyan)]">
                   {t.hero.title[1]}
                 </span>
                 {t.hero.title[2]}
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
                 <span className="font-bold text-[color:var(--navy-deep)]">DGI</span>
-                <span className="font-bold bg-gradient-to-r from-[color:var(--brand-cyan)] to-[color:var(--brand-green)] bg-clip-text text-transparent"> Link</span>
+                <span className="font-bold text-[color:var(--brand-cyan)]"> Link</span>
                 {t.hero.desc[0].replace(/^DGI Link/, "")}
                 {t.hero.desc[1]}
                 <span className="font-semibold text-[color:var(--brand-cyan)]">{t.hero.desc[2]}</span>
@@ -620,7 +620,7 @@ function Index() {
                   <LogoMark />
                   <span className="font-display text-lg font-extrabold tracking-tight">
                     <span className="text-[color:var(--navy-deep)]">DGI</span>
-                    <span className="bg-gradient-to-r from-[color:var(--brand-cyan)] to-[color:var(--brand-green)] bg-clip-text text-transparent"> Link</span>
+                    <span className="text-[color:var(--brand-cyan)]"> Link</span>
                   </span>
                 </div>
                 <p className="mt-3 max-w-xs text-sm text-muted-foreground">{t.footer.tagline}</p>
