@@ -58,9 +58,9 @@ const T = {
     nav: { home: "Home", services: "Services", about: "About", contact: "Contact" },
     hero: {
       eyebrow: "Data · Green · Intelligence",
-      title: "흩어진 것을 연결합니다.",
+      title: ["흩어진 것을 ", "연결", "합니다."] as readonly string[],
       desc:
-        "DGI Link는 현장에 흩어진 정보와 사람을 데이터와 AI로 연결해 더 간단하고 효율적인 경험을 만듭니다.",
+        ["DGI Link", "는 현장에 흩어진 정보와 사람을 ", "데이터", "와 ", "AI", "로 연결해 더 간단하고 효율적인 경험을 만듭니다."] as readonly string[],
       ctaPrimary: "서비스 살펴보기",
       ctaSecondary: "브랜드 이야기",
     },
@@ -150,9 +150,9 @@ const T = {
     nav: { home: "Home", services: "Services", about: "About", contact: "Contact" },
     hero: {
       eyebrow: "Data · Green · Intelligence",
-      title: "Connecting What's Scattered.",
+      title: ["Connecting ", "What's", " Scattered."] as readonly string[],
       desc:
-        "DGI Link connects scattered information and people on the ground through data and AI — for simpler, more efficient work.",
+        ["DGI Link", " connects scattered information and people on the ground through ", "data", " and ", "AI", " — for simpler, more efficient work."] as readonly string[],
       ctaPrimary: "Explore services",
       ctaSecondary: "Our story",
     },
@@ -244,9 +244,9 @@ const T = {
     nav: { home: "Home", services: "Services", about: "About", contact: "Contact" },
     hero: {
       eyebrow: "Data · Green · Intelligence",
-      title: "散らばったものを、つなぐ。",
+      title: ["散らばったものを、", "つなぐ", "。"] as readonly string[],
       desc:
-        "DGI Linkは、現場に散らばった情報と人をデータとAIでつなぎ、よりシンプルで効率的な体験をつくります。",
+        ["DGI Link", "は、現場に散らばった情報と人を", "データ", "と", "AI", "でつなぎ、よりシンプルで効率的な体験をつくります。"] as readonly string[],
       ctaPrimary: "サービスを見る",
       ctaSecondary: "ブランドストーリー",
     },
@@ -467,11 +467,20 @@ function Index() {
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-[color:var(--brand-green)]" />
                 {t.hero.eyebrow}
               </p>
-              <h1 className="mt-5 font-display text-[40px] font-extrabold leading-[1.1] tracking-tight text-[color:var(--navy-deep)] sm:text-[56px] lg:text-[64px]">
-                {t.hero.title}
+              <h1 className="mt-5 font-display text-[40px] font-extrabold leading-[1.15] tracking-tight text-[color:var(--navy-deep)] sm:text-[56px] lg:text-[64px]">
+                {t.hero.title[0]}
+                <span className="bg-gradient-to-r from-[color:var(--brand-cyan)] to-[color:var(--brand-green)] bg-clip-text text-transparent">
+                  {t.hero.title[1]}
+                </span>
+                {t.hero.title[2]}
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                {t.hero.desc}
+                <span className="font-semibold text-[color:var(--navy)]">{t.hero.desc[0]}</span>
+                {t.hero.desc[1]}
+                <span className="font-semibold text-[color:var(--brand-cyan)]">{t.hero.desc[2]}</span>
+                {t.hero.desc[3]}
+                <span className="font-semibold text-[color:var(--brand-orange)]">{t.hero.desc[4]}</span>
+                {t.hero.desc[5]}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
@@ -509,24 +518,40 @@ function Index() {
         {/* ABOUT / MEANING */}
         <section id="about" className="relative scroll-mt-20 bg-white py-20 sm:py-28">
           <SectionHeader eyebrow={t.about.eyebrow} title={t.about.title} desc={t.about.desc} />
-          <div className="mx-auto mt-12 max-w-5xl px-4 sm:px-6">
-            <ol data-reveal className="dgi-reveal flex flex-col gap-4 sm:flex-row sm:items-stretch">
-              {t.about.meaning.map((m, i) => (
-                <li key={m.k} className="flex flex-1 items-start gap-3">
-                  <div className="flex flex-1 items-start gap-3 rounded-2xl border border-border bg-[color:var(--background)] p-5">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[color:var(--navy)] text-xs font-bold text-white">
-                      {m.k[0]}
+          <div className="mx-auto mt-12 max-w-6xl px-4 sm:px-6">
+            <ol data-reveal className="dgi-reveal grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
+              {t.about.meaning.map((m, i) => {
+                const tones = [
+                  { bg: "var(--navy)", soft: "rgba(15,45,104,0.08)", text: "#fff" },
+                  { bg: "var(--brand-green)", soft: "var(--brand-green-soft)", text: "#fff" },
+                  { bg: "var(--brand-cyan)", soft: "rgba(6,182,212,0.10)", text: "#fff" },
+                  { bg: "var(--brand-orange)", soft: "var(--brand-orange-soft)", text: "#fff" },
+                ];
+                const tone = tones[i % tones.length];
+                return (
+                  <li key={m.k} className="h-full">
+                    <div
+                      className="flex h-full flex-col gap-3 rounded-2xl border border-border bg-white p-5 transition-all hover:-translate-y-1 hover:shadow-[0_18px_40px_-25px_rgba(15,45,104,0.35)] sm:p-6"
+                      style={{ borderTop: `3px solid ${tone.bg}` }}
+                    >
+                      <div className="flex items-center gap-3">
+                        <div
+                          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl font-display text-sm font-extrabold"
+                          style={{ background: tone.bg, color: tone.text }}
+                        >
+                          {m.k[0]}
+                        </div>
+                        <div className="font-display text-lg font-bold text-[color:var(--navy-deep)] sm:text-xl">
+                          {m.k}
+                        </div>
+                      </div>
+                      <div className="text-[14px] leading-relaxed text-muted-foreground sm:text-[15px]" style={{ wordBreak: "keep-all" }}>
+                        {m.v}
+                      </div>
                     </div>
-                    <div>
-                      <div className="font-display text-base font-semibold text-[color:var(--navy-deep)]">{m.k}</div>
-                      <div className="mt-1 text-sm text-muted-foreground">{m.v}</div>
-                    </div>
-                  </div>
-                  {i < t.about.meaning.length - 1 && (
-                    <div className="hidden self-center text-muted-foreground sm:block"><Arrow /></div>
-                  )}
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ol>
           </div>
         </section>
@@ -775,7 +800,7 @@ function ProductShowcase() {
   );
 }
 
-function CardScanCard({ t }: { t: typeof T.ko.cardscan }) {
+function CardScanCard({ t }: { t: typeof T[Lang]["cardscan"] }) {
   return (
     <article
       data-reveal
@@ -851,7 +876,7 @@ function CardScanCard({ t }: { t: typeof T.ko.cardscan }) {
   );
 }
 
-function KFarmCard({ t }: { t: typeof T.ko.kfarm }) {
+function KFarmCard({ t }: { t: typeof T[Lang]["kfarm"] }) {
   return (
     <article
       data-reveal
@@ -925,21 +950,21 @@ function FlowCard({ tone, label, steps }: { tone: "navy" | "green"; label: strin
   const text = tone === "navy" ? "text-white" : "text-[color:var(--navy-deep)]";
   const sub = tone === "navy" ? "text-white/65" : "text-muted-foreground";
   return (
-    <div data-reveal className={`dgi-reveal rounded-3xl border border-border bg-gradient-to-br ${bg} p-6 ${text}`}>
-      <div className={`text-[11px] font-semibold uppercase tracking-wider`} style={{ color: accent as string }}>
+    <div data-reveal className={`dgi-reveal rounded-3xl border border-border bg-gradient-to-br ${bg} p-7 sm:p-8 ${text}`} style={{ wordBreak: "keep-all" }}>
+      <div className={`text-[13px] font-display font-bold tracking-wide`} style={{ color: accent as string }}>
         {label}
       </div>
-      <ol className="mt-4 space-y-2">
+      <ol className="mt-5 space-y-3">
         {steps.map((s, i) => (
-          <li key={s} className="flex items-center gap-3">
+          <li key={s} className="flex items-center gap-3.5">
             <span
-              className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-bold"
+              className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[12px] font-bold"
               style={{ background: accent as string, color: tone === "navy" ? "#081A3A" : "#fff" }}
             >
               {i + 1}
             </span>
-            <span className={`font-display text-base font-semibold`}>{s}</span>
-            {i < steps.length - 1 && <span className={`ml-auto text-xs ${sub}`}>→</span>}
+            <span className={`font-display text-[17px] font-semibold leading-snug`}>{s}</span>
+            {i < steps.length - 1 && <span className={`ml-auto text-sm ${sub}`}>→</span>}
           </li>
         ))}
       </ol>
