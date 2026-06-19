@@ -810,7 +810,7 @@ function ProductShowcase() {
             />
           </div>
           <div className="mt-4 text-center">
-            <div className="text-[11px] font-semibold uppercase tracking-wider text-[color:var(--brand-cyan)]">CardScan AI</div>
+            <div className="text-[12px] font-bold tracking-wider text-[color:var(--brand-cyan)]">CardScan<span className="text-[color:var(--brand-orange)]"> AI</span></div>
             <div className="mt-1 text-xs text-muted-foreground">Business contacts</div>
           </div>
         </a>
@@ -834,7 +834,7 @@ function ProductShowcase() {
             />
           </div>
           <div className="mt-4 text-center">
-            <div className="text-[11px] font-semibold uppercase tracking-wider text-[color:var(--brand-green)]">kFarmAI</div>
+            <div className="text-[12px] font-bold tracking-wider text-[color:var(--brand-green)]">kFarm<span className="text-[color:var(--brand-orange)]">AI</span></div>
             <div className="mt-1 text-xs text-muted-foreground">Farm community</div>
           </div>
         </a>
