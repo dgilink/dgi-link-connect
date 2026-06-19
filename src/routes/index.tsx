@@ -406,8 +406,9 @@ function Index() {
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
           <a href="#top" className="flex items-center gap-2">
             <LogoMark />
-            <span className="font-display text-[17px] font-bold tracking-tight text-[color:var(--navy)]">
-              DGI Link
+            <span className="font-display text-[20px] font-extrabold tracking-tight">
+              <span className="text-[color:var(--navy-deep)]">DGI</span>
+              <span className="bg-gradient-to-r from-[color:var(--brand-cyan)] to-[color:var(--brand-green)] bg-clip-text text-transparent"> Link</span>
             </span>
           </a>
 
