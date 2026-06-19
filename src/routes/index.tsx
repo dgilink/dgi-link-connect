@@ -935,20 +935,20 @@ function FlowCard({ tone, label, steps }: { tone: "navy" | "green"; label: strin
   const sub = tone === "navy" ? "text-white/65" : "text-muted-foreground";
   return (
     <div data-reveal className={`dgi-reveal rounded-3xl border border-border bg-gradient-to-br ${bg} p-6 ${text}`}>
-      <div className={`text-[11px] font-semibold uppercase tracking-wider`} style={{ color: accent as string }}>
+      <div className={`text-[13px] font-display font-bold tracking-wide`} style={{ color: accent as string }}>
         {label}
       </div>
-      <ol className="mt-4 space-y-2">
+      <ol className="mt-5 space-y-3">
         {steps.map((s, i) => (
-          <li key={s} className="flex items-center gap-3">
+          <li key={s} className="flex items-center gap-3.5">
             <span
-              className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-bold"
+              className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[12px] font-bold"
               style={{ background: accent as string, color: tone === "navy" ? "#081A3A" : "#fff" }}
             >
               {i + 1}
             </span>
-            <span className={`font-display text-base font-semibold`}>{s}</span>
-            {i < steps.length - 1 && <span className={`ml-auto text-xs ${sub}`}>→</span>}
+            <span className={`font-display text-[17px] font-semibold leading-snug`}>{s}</span>
+            {i < steps.length - 1 && <span className={`ml-auto text-sm ${sub}`}>→</span>}
           </li>
         ))}
       </ol>
