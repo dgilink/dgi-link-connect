@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import cardscannerIcon from "@/assets/cardscanner-icon.png.asset.json";
+import kfarmaiLogo from "@/assets/kfarmai-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -94,9 +96,7 @@ function Index() {
       >
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
           <a href="#top" className="font-display text-[18px] font-bold tracking-tight">
-            <span className="text-foreground">DGI</span>
-            <span className="text-primary">.</span>
-            <span className="text-foreground">Link</span>
+            <span className="text-foreground">DGI Link</span>
           </a>
           <div className="hidden items-center gap-7 md:flex">
             {copy.nav.map((n, i) => (
@@ -231,6 +231,8 @@ function Index() {
 
           <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-2">
             <ServiceCard
+              iconSrc={cardscannerIcon.url}
+              iconBg="#0a1628"
               badge="📇 App · 출시 준비중"
               title="명함스캐너"
               lead="명함 찍으면 기본 연락처 즉시 저장. 전화 올 때 회사·이름·직책이 먼저 뜹니다."
@@ -245,6 +247,11 @@ function Index() {
               tags={["🇰🇷 한국", "🇯🇵 일본", "🌐 글로벌", "영업·보험·부동산"]}
             />
             <ServiceCard
+              iconSrc={kfarmaiLogo.url}
+              iconBg="#ffffff"
+              iconPadded
+              ctaHref="https://kfarmai.com"
+              ctaLabel="kFarmAI 바로가기 →"
               badge="🌱 Platform · 운영중"
               title="kFarmAI"
               lead="농업인·텃밭·홈가드닝·반려식물을 하나로 잇는 식물 특화 AI 커뮤니티 플랫폼"
@@ -323,10 +330,10 @@ function Index() {
         <div className="mx-auto max-w-6xl">
           <SectionHeader label="Contact" title="함께 만들어 갑니다" />
           <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <ContactCard icon="✉️" label="일반 문의" value="hello@dgilink.com" />
-            <ContactCard icon="🤝" label="제휴·B2B" value="biz@dgilink.com" />
-            <ContactCard icon="📱" label="명함스캐너" value="Google Play · App Store" />
-            <ContactCard icon="🌱" label="kFarmAI" value="kfarmai.com" />
+            <ContactCard icon="✉️" label="일반 문의 · Contact" value="contact@dgilink.com" />
+            <ContactCard icon="🤝" label="제휴·B2B · Partner" value="partner@dgilink.com" />
+            <ContactCard icon="💬" label="고객지원 · Support" value="support@dgilink.com" />
+            <ContactCard icon="🌱" label="Platform · kFarmAI" value="kfarmai.com" href="https://kfarmai.com" />
           </div>
         </div>
       </section>
@@ -335,9 +342,7 @@ function Index() {
       <footer className="border-t border-border px-5 py-10 sm:px-8">
         <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 sm:flex sm:flex-wrap sm:justify-between">
           <div className="font-display text-[16px] font-bold tracking-tight">
-            <span>DGI</span>
-            <span className="text-primary">.</span>
-            <span>Link</span>
+            <span>DGI Link</span>
           </div>
           <div className="col-span-2 flex flex-wrap gap-x-5 gap-y-2 text-[13px] text-muted-foreground sm:col-auto">
             {["서비스", "개인정보처리방침", "이용약관", "문의"].map((l) => (
@@ -388,6 +393,11 @@ function DgiCard({ letter, word, desc }: { letter: string; word: string; desc: s
 }
 
 function ServiceCard({
+  iconSrc,
+  iconBg,
+  iconPadded,
+  ctaHref,
+  ctaLabel,
   badge,
   title,
   lead,
@@ -395,6 +405,11 @@ function ServiceCard({
   features,
   tags,
 }: {
+  iconSrc?: string;
+  iconBg?: string;
+  iconPadded?: boolean;
+  ctaHref?: string;
+  ctaLabel?: string;
   badge: string;
   title: string;
   lead: string;
@@ -407,8 +422,18 @@ function ServiceCard({
       data-reveal
       className="dgi-reveal group rounded-[20px] border border-border bg-background/60 p-7 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-[0_20px_50px_-20px_rgba(34,197,94,0.25)] sm:p-9"
     >
-      <div className="inline-flex items-center rounded-full border border-border bg-card px-3 py-1 text-[11px] font-medium text-muted-foreground">
-        {badge}
+      <div className="flex items-center gap-4">
+        {iconSrc && (
+          <div
+            className="flex h-[72px] w-[72px] shrink-0 items-center justify-center overflow-hidden rounded-[16px] border border-border"
+            style={{ background: iconBg, padding: iconPadded ? 6 : 0 }}
+          >
+            <img src={iconSrc} alt={`${title} logo`} className="h-full w-full object-contain" />
+          </div>
+        )}
+        <div className="inline-flex items-center rounded-full border border-border bg-card px-3 py-1 text-[11px] font-medium text-muted-foreground">
+          {badge}
+        </div>
       </div>
       <h3
         className="mt-5 font-display text-[32px] font-bold sm:text-[40px]"
@@ -440,16 +465,23 @@ function ServiceCard({
           </span>
         ))}
       </div>
+      {ctaHref && ctaLabel && (
+        <a
+          href={ctaHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-7 inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-10px_rgba(34,197,94,0.6)]"
+        >
+          {ctaLabel}
+        </a>
+      )}
     </div>
   );
 }
 
-function ContactCard({ icon, label, value }: { icon: string; label: string; value: string }) {
-  return (
-    <div
-      data-reveal
-      className="dgi-reveal group flex items-center gap-4 rounded-[20px] border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40"
-    >
+function ContactCard({ icon, label, value, href }: { icon: string; label: string; value: string; href?: string }) {
+  const inner = (
+    <>
       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-[22px]">
         {icon}
       </div>
@@ -457,6 +489,20 @@ function ContactCard({ icon, label, value }: { icon: string; label: string; valu
         <p className="text-[12px] uppercase tracking-wider text-muted-foreground">{label}</p>
         <p className="mt-1 truncate font-display text-[16px] font-semibold text-foreground">{value}</p>
       </div>
+    </>
+  );
+  const className =
+    "dgi-reveal group flex items-center gap-4 rounded-[20px] border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40";
+  if (href) {
+    return (
+      <a data-reveal href={href} target="_blank" rel="noopener noreferrer" className={className}>
+        {inner}
+      </a>
+    );
+  }
+  return (
+    <div data-reveal className={className}>
+      {inner}
     </div>
   );
 }
