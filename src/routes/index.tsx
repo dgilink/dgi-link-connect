@@ -795,13 +795,13 @@ function ProductShowcase() {
         </defs>
       </svg>
 
-      <div className="relative z-10 grid grid-cols-2 gap-3 sm:gap-4">
+      <div className="relative z-10 grid grid-cols-[0.85fr_1fr] items-start gap-6 sm:gap-8">
         <a
           href={CARDSCAN_URL}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="CardScan AI Google Play 페이지 열기"
-          className="group animate-dgi-float rounded-3xl border border-border bg-white px-3 py-4 shadow-[0_10px_40px_-20px_rgba(15,45,104,0.35)] transition-all hover:-translate-y-1 hover:border-[color:var(--brand-cyan)]"
+          className="group mt-8 animate-dgi-float rounded-3xl border border-border bg-white px-3 py-4 shadow-[0_10px_40px_-20px_rgba(15,45,104,0.35)] transition-all hover:-translate-y-1 hover:border-[color:var(--brand-cyan)]"
           style={{ animationDelay: "0s" }}
         >
           <div className="mx-auto flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl bg-[#08152e]">
