@@ -784,7 +784,7 @@ function ProductShowcase() {
   );
 }
 
-function CardScanCard({ t }: { t: typeof T.ko.cardscan }) {
+function CardScanCard({ t }: { t: typeof T[Lang]["cardscan"] }) {
   return (
     <article
       data-reveal
@@ -860,7 +860,7 @@ function CardScanCard({ t }: { t: typeof T.ko.cardscan }) {
   );
 }
 
-function KFarmCard({ t }: { t: typeof T.ko.kfarm }) {
+function KFarmCard({ t }: { t: typeof T[Lang]["kfarm"] }) {
   return (
     <article
       data-reveal
