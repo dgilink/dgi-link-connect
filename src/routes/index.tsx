@@ -957,7 +957,8 @@ function KFarmCard({ t }: { t: typeof T[Lang]["kfarm"] }) {
             rel="noopener noreferrer"
             className="mt-1 inline-block font-display text-2xl font-bold tracking-tight text-[color:var(--navy-deep)] hover:text-[color:var(--brand-green)]"
           >
-            {t.title}
+            {t.title.replace(/AI$/, "")}
+            <span className="text-[color:var(--brand-orange)]">AI</span>
           </a>
         </div>
       </div>
