@@ -476,7 +476,9 @@ function Index() {
                 {t.hero.title[2]}
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                <span className="font-semibold text-[color:var(--navy)]">{t.hero.desc[0]}</span>
+                <span className="font-bold text-[color:var(--navy-deep)]">DGI</span>
+                <span className="font-bold bg-gradient-to-r from-[color:var(--brand-cyan)] to-[color:var(--brand-green)] bg-clip-text text-transparent"> Link</span>
+                {t.hero.desc[0].replace(/^DGI Link/, "")}
                 {t.hero.desc[1]}
                 <span className="font-semibold text-[color:var(--brand-cyan)]">{t.hero.desc[2]}</span>
                 {t.hero.desc[3]}
