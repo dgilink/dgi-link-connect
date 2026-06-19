@@ -470,7 +470,7 @@ function Index() {
               </p>
               <h1 className="mt-5 font-display text-[40px] font-extrabold leading-[1.15] tracking-tight text-[color:var(--navy-deep)] sm:text-[56px] lg:text-[64px]">
                 {t.hero.title[0]}
-                <span className="text-[color:var(--brand-cyan)]">
+                <span className="text-[color:var(--brand-orange)]">
                   {t.hero.title[1]}
                 </span>
                 {t.hero.title[2]}
