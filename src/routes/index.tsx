@@ -406,8 +406,9 @@ function Index() {
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
           <a href="#top" className="flex items-center gap-2">
             <LogoMark />
-            <span className="font-display text-[17px] font-bold tracking-tight text-[color:var(--navy)]">
-              DGI Link
+            <span className="font-display text-[20px] font-extrabold tracking-tight">
+              <span className="text-[color:var(--navy-deep)]">DGI</span>
+              <span className="bg-gradient-to-r from-[color:var(--brand-cyan)] to-[color:var(--brand-green)] bg-clip-text text-transparent"> Link</span>
             </span>
           </a>
 
@@ -475,7 +476,9 @@ function Index() {
                 {t.hero.title[2]}
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                <span className="font-semibold text-[color:var(--navy)]">{t.hero.desc[0]}</span>
+                <span className="font-bold text-[color:var(--navy-deep)]">DGI</span>
+                <span className="font-bold bg-gradient-to-r from-[color:var(--brand-cyan)] to-[color:var(--brand-green)] bg-clip-text text-transparent"> Link</span>
+                {t.hero.desc[0].replace(/^DGI Link/, "")}
                 {t.hero.desc[1]}
                 <span className="font-semibold text-[color:var(--brand-cyan)]">{t.hero.desc[2]}</span>
                 {t.hero.desc[3]}
@@ -615,7 +618,10 @@ function Index() {
               <div>
                 <div className="flex items-center gap-2">
                   <LogoMark />
-                  <span className="font-display text-base font-bold text-[color:var(--navy)]">DGI Link</span>
+                  <span className="font-display text-lg font-extrabold tracking-tight">
+                    <span className="text-[color:var(--navy-deep)]">DGI</span>
+                    <span className="bg-gradient-to-r from-[color:var(--brand-cyan)] to-[color:var(--brand-green)] bg-clip-text text-transparent"> Link</span>
+                  </span>
                 </div>
                 <p className="mt-3 max-w-xs text-sm text-muted-foreground">{t.footer.tagline}</p>
               </div>
@@ -658,11 +664,46 @@ function Index() {
    ========================= */
 function LogoMark() {
   return (
-    <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[color:var(--navy)] to-[color:var(--brand-cyan)] text-white shadow-sm">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-        <circle cx="6" cy="6" r="2" />
-        <circle cx="18" cy="18" r="2" />
-        <path d="M8 6h6a4 4 0 0 1 4 4v6" />
+    <span
+      className="relative inline-flex h-9 w-9 items-center justify-center rounded-xl shadow-md"
+      style={{
+        background:
+          "linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 45%, var(--brand-cyan) 75%, var(--brand-green) 100%)",
+      }}
+      aria-hidden
+    >
+      <span
+        className="pointer-events-none absolute -inset-0.5 rounded-xl opacity-60 blur-[6px]"
+        style={{
+          background:
+            "linear-gradient(135deg, rgba(6,182,212,0.55), rgba(34,197,94,0.45))",
+          zIndex: -1,
+        }}
+      />
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
+        {/* Left link (DGI side) */}
+        <rect
+          x="2.5"
+          y="8.5"
+          width="11"
+          height="7"
+          rx="3.5"
+          stroke="#ffffff"
+          strokeOpacity="0.95"
+          strokeWidth="2"
+        />
+        {/* Right link (Link side) */}
+        <rect
+          x="10.5"
+          y="8.5"
+          width="11"
+          height="7"
+          rx="3.5"
+          stroke="#a7f3d0"
+          strokeWidth="2"
+        />
+        {/* Spark */}
+        <circle cx="12" cy="12" r="1.4" fill="#ffffff" />
       </svg>
     </span>
   );
