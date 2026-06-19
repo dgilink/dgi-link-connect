@@ -58,9 +58,9 @@ const T = {
     nav: { home: "Home", services: "Services", about: "About", contact: "Contact" },
     hero: {
       eyebrow: "Data · Green · Intelligence",
-      title: "흩어진 것을 연결합니다.",
+      title: ["흩어진 것을 ", "연결", "합니다."] as const,
       desc:
-        "DGI Link는 현장에 흩어진 정보와 사람을 데이터와 AI로 연결해 더 간단하고 효율적인 경험을 만듭니다.",
+        ["DGI Link", "는 현장에 흩어진 정보와 사람을 ", "데이터", "와 ", "AI", "로 연결해 더 간단하고 효율적인 경험을 만듭니다."] as const,
       ctaPrimary: "서비스 살펴보기",
       ctaSecondary: "브랜드 이야기",
     },
@@ -150,9 +150,9 @@ const T = {
     nav: { home: "Home", services: "Services", about: "About", contact: "Contact" },
     hero: {
       eyebrow: "Data · Green · Intelligence",
-      title: "Connecting What's Scattered.",
+      title: ["Connecting ", "What's", " Scattered."] as const,
       desc:
-        "DGI Link connects scattered information and people on the ground through data and AI — for simpler, more efficient work.",
+        ["DGI Link", " connects scattered information and people on the ground through ", "data", " and ", "AI", " — for simpler, more efficient work."] as const,
       ctaPrimary: "Explore services",
       ctaSecondary: "Our story",
     },
@@ -244,9 +244,9 @@ const T = {
     nav: { home: "Home", services: "Services", about: "About", contact: "Contact" },
     hero: {
       eyebrow: "Data · Green · Intelligence",
-      title: "散らばったものを、つなぐ。",
+      title: ["散らばったものを、", "つなぐ", "。"] as const,
       desc:
-        "DGI Linkは、現場に散らばった情報と人をデータとAIでつなぎ、よりシンプルで効率的な体験をつくります。",
+        ["DGI Link", "は、現場に散らばった情報と人を", "データ", "と", "AI", "でつなぎ、よりシンプルで効率的な体験をつくります。"] as const,
       ctaPrimary: "サービスを見る",
       ctaSecondary: "ブランドストーリー",
     },
