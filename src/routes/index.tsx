@@ -467,11 +467,20 @@ function Index() {
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-[color:var(--brand-green)]" />
                 {t.hero.eyebrow}
               </p>
-              <h1 className="mt-5 font-display text-[40px] font-extrabold leading-[1.1] tracking-tight text-[color:var(--navy-deep)] sm:text-[56px] lg:text-[64px]">
-                {t.hero.title}
+              <h1 className="mt-5 font-display text-[40px] font-extrabold leading-[1.15] tracking-tight text-[color:var(--navy-deep)] sm:text-[56px] lg:text-[64px]">
+                {t.hero.title[0]}
+                <span className="bg-gradient-to-r from-[color:var(--brand-cyan)] to-[color:var(--brand-green)] bg-clip-text text-transparent">
+                  {t.hero.title[1]}
+                </span>
+                {t.hero.title[2]}
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                {t.hero.desc}
+                <span className="font-semibold text-[color:var(--navy)]">{t.hero.desc[0]}</span>
+                {t.hero.desc[1]}
+                <span className="font-semibold text-[color:var(--brand-cyan)]">{t.hero.desc[2]}</span>
+                {t.hero.desc[3]}
+                <span className="font-semibold text-[color:var(--brand-orange)]">{t.hero.desc[4]}</span>
+                {t.hero.desc[5]}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
