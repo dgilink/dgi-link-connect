@@ -985,7 +985,7 @@ function ContactCard({
   const kMain = aiMatch ? aiMatch[1] : k;
   const kAI = aiMatch ? aiMatch[2] : "";
   const inner = (
-    <div className="flex h-full flex-col rounded-2xl border border-border bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-[color:var(--navy)] hover:shadow-[0_18px_40px_-25px_rgba(15,45,104,0.45)]">
+    <div className="flex h-full flex-col rounded-2xl border border-[rgba(15,45,104,0.12)] bg-white p-6 shadow-[0_10px_30px_-18px_rgba(15,45,104,0.25)] ring-1 ring-black/5 transition-all hover:-translate-y-0.5 hover:border-[color:var(--navy)] hover:shadow-[0_22px_50px_-25px_rgba(15,45,104,0.5)]">
       <div className="text-[13px] font-display font-bold tracking-tight text-[color:var(--brand-green)]">
         {kMain}
         {kAI && <span className="text-[color:var(--brand-orange)]">{kAI}</span>}
