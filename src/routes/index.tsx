@@ -664,11 +664,46 @@ function Index() {
    ========================= */
 function LogoMark() {
   return (
-    <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[color:var(--navy)] to-[color:var(--brand-cyan)] text-white shadow-sm">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-        <circle cx="6" cy="6" r="2" />
-        <circle cx="18" cy="18" r="2" />
-        <path d="M8 6h6a4 4 0 0 1 4 4v6" />
+    <span
+      className="relative inline-flex h-9 w-9 items-center justify-center rounded-xl shadow-md"
+      style={{
+        background:
+          "linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 45%, var(--brand-cyan) 75%, var(--brand-green) 100%)",
+      }}
+      aria-hidden
+    >
+      <span
+        className="pointer-events-none absolute -inset-0.5 rounded-xl opacity-60 blur-[6px]"
+        style={{
+          background:
+            "linear-gradient(135deg, rgba(6,182,212,0.55), rgba(34,197,94,0.45))",
+          zIndex: -1,
+        }}
+      />
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
+        {/* Left link (DGI side) */}
+        <rect
+          x="2.5"
+          y="8.5"
+          width="11"
+          height="7"
+          rx="3.5"
+          stroke="#ffffff"
+          strokeOpacity="0.95"
+          strokeWidth="2"
+        />
+        {/* Right link (Link side) */}
+        <rect
+          x="10.5"
+          y="8.5"
+          width="11"
+          height="7"
+          rx="3.5"
+          stroke="#a7f3d0"
+          strokeWidth="2"
+        />
+        {/* Spark */}
+        <circle cx="12" cy="12" r="1.4" fill="#ffffff" />
       </svg>
     </span>
   );
