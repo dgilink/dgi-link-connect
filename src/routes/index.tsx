@@ -602,8 +602,8 @@ function Index() {
         <section id="contact" className="relative scroll-mt-20 py-20 sm:py-28">
           <SectionHeader eyebrow={t.contact.eyebrow} title={t.contact.title} desc={t.contact.desc} />
           <div className="mx-auto mt-12 grid max-w-5xl gap-4 px-4 sm:px-6 md:grid-cols-3">
-            {t.contact.items.map((c) => (
-              <ContactCard key={c.k} {...c} />
+            {t.contact.items.map((c, i) => (
+              <ContactCard key={c.k} {...c} tone={["blue", "green", "amber"][i % 3] as "blue" | "green" | "amber"} />
             ))}
           </div>
         </section>
@@ -979,13 +979,21 @@ function FlowCard({ tone, label, steps }: { tone: "navy" | "green"; label: strin
 }
 
 function ContactCard({
-  k, v, action, href,
-}: { k: string; v: string; action: string; href?: string }) {
+  k, v, action, href, tone = "blue",
+}: { k: string; v: string; action: string; href?: string; tone?: "blue" | "green" | "amber" }) {
   const aiMatch = k.match(/^(.*?)(AI)$/);
   const kMain = aiMatch ? aiMatch[1] : k;
   const kAI = aiMatch ? aiMatch[2] : "";
+  const toneStyles = {
+    blue:  { bg: "linear-gradient(180deg, #f3f7ff 0%, #eaf1fb 100%)", border: "rgba(15,45,104,0.14)" },
+    green: { bg: "linear-gradient(180deg, #f1faf4 0%, #e6f5ec 100%)", border: "rgba(34,120,72,0.18)" },
+    amber: { bg: "linear-gradient(180deg, #fff7ee 0%, #fdeede 100%)", border: "rgba(180,90,20,0.18)" },
+  }[tone];
   const inner = (
-    <div className="flex h-full flex-col rounded-2xl border border-[rgba(15,45,104,0.12)] bg-white p-6 shadow-[0_10px_30px_-18px_rgba(15,45,104,0.25)] ring-1 ring-black/5 transition-all hover:-translate-y-0.5 hover:border-[color:var(--navy)] hover:shadow-[0_22px_50px_-25px_rgba(15,45,104,0.5)]">
+    <div
+      className="flex h-full flex-col rounded-2xl border p-6 shadow-[0_10px_30px_-18px_rgba(15,45,104,0.25)] ring-1 ring-black/5 transition-all hover:-translate-y-0.5 hover:border-[color:var(--navy)] hover:shadow-[0_22px_50px_-25px_rgba(15,45,104,0.5)]"
+      style={{ background: toneStyles.bg, borderColor: toneStyles.border }}
+    >
       <div className="text-[13px] font-display font-bold tracking-tight text-[color:var(--brand-green)]">
         {kMain}
         {kAI && <span className="text-[color:var(--brand-orange)]">{kAI}</span>}
