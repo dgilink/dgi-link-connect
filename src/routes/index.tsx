@@ -949,22 +949,28 @@ function FlowCard({ tone, label, steps }: { tone: "navy" | "green"; label: strin
   const bg = tone === "navy" ? "from-[color:var(--navy-deep)] to-[color:var(--navy)]" : "from-white to-[color:var(--brand-green-soft)]";
   const text = tone === "navy" ? "text-white" : "text-[color:var(--navy-deep)]";
   const sub = tone === "navy" ? "text-white/65" : "text-muted-foreground";
+  const aiColor = tone === "navy" ? "var(--brand-orange)" : "var(--brand-orange)";
+  // Split "AI" off the end of the label so we can color it differently
+  const aiMatch = label.match(/^(.*?)(AI)$/);
+  const labelMain = aiMatch ? aiMatch[1] : label;
+  const labelAI = aiMatch ? aiMatch[2] : "";
   return (
-    <div data-reveal className={`dgi-reveal rounded-3xl border border-border bg-gradient-to-br ${bg} p-7 sm:p-8 ${text}`} style={{ wordBreak: "keep-all" }}>
-      <div className={`text-[13px] font-display font-bold tracking-wide`} style={{ color: accent as string }}>
-        {label}
+    <div data-reveal className={`dgi-reveal rounded-3xl border border-border bg-gradient-to-br ${bg} p-5 sm:p-6 ${text}`} style={{ wordBreak: "keep-all" }}>
+      <div className="text-[13px] font-display font-bold tracking-wide" style={{ color: accent as string }}>
+        {labelMain}
+        {labelAI && <span style={{ color: aiColor }}>{labelAI}</span>}
       </div>
-      <ol className="mt-5 space-y-3">
+      <ol className="mt-3 space-y-1.5">
         {steps.map((s, i) => (
-          <li key={s} className="flex items-center gap-3.5">
+          <li key={s} className="flex items-center gap-3">
             <span
-              className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[12px] font-bold"
+              className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-bold"
               style={{ background: accent as string, color: tone === "navy" ? "#081A3A" : "#fff" }}
             >
               {i + 1}
             </span>
-            <span className={`font-display text-[17px] font-semibold leading-snug`}>{s}</span>
-            {i < steps.length - 1 && <span className={`ml-auto text-sm ${sub}`}>→</span>}
+            <span className="font-display text-[15px] font-semibold leading-snug">{s}</span>
+            {i < steps.length - 1 && <span className={`ml-auto text-xs ${sub}`}>→</span>}
           </li>
         ))}
       </ol>
@@ -975,9 +981,15 @@ function FlowCard({ tone, label, steps }: { tone: "navy" | "green"; label: strin
 function ContactCard({
   k, v, action, href,
 }: { k: string; v: string; action: string; href?: string }) {
+  const aiMatch = k.match(/^(.*?)(AI)$/);
+  const kMain = aiMatch ? aiMatch[1] : k;
+  const kAI = aiMatch ? aiMatch[2] : "";
   const inner = (
     <div className="flex h-full flex-col rounded-2xl border border-border bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-[color:var(--navy)] hover:shadow-[0_18px_40px_-25px_rgba(15,45,104,0.45)]">
-      <div className="text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-green)]">{k}</div>
+      <div className="text-[13px] font-display font-bold tracking-tight text-[color:var(--brand-green)]">
+        {kMain}
+        {kAI && <span className="text-[color:var(--brand-orange)]">{kAI}</span>}
+      </div>
       <div className="mt-2 font-display text-lg font-semibold text-[color:var(--navy-deep)]">{v}</div>
       <div className="mt-auto pt-6">
         <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[color:var(--navy)]">
@@ -987,11 +999,11 @@ function ContactCard({
     </div>
   );
   return href ? (
-    <a data-reveal className="dgi-reveal" href={href} target="_blank" rel="noopener noreferrer" aria-label={`${k} — ${action}`}>
+    <a data-reveal className="dgi-reveal block" href={href} target="_blank" rel="noopener noreferrer" aria-label={`${k} — ${action}`}>
       {inner}
     </a>
   ) : (
-    <a data-reveal className="dgi-reveal" href="mailto:hello@dgilink.com" aria-label={`${k} — ${action}`}>
+    <a data-reveal className="dgi-reveal block" href="mailto:hello@dgilink.com" aria-label={`${k} — ${action}`}>
       {inner}
     </a>
   );
