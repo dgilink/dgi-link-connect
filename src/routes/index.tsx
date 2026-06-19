@@ -518,24 +518,40 @@ function Index() {
         {/* ABOUT / MEANING */}
         <section id="about" className="relative scroll-mt-20 bg-white py-20 sm:py-28">
           <SectionHeader eyebrow={t.about.eyebrow} title={t.about.title} desc={t.about.desc} />
-          <div className="mx-auto mt-12 max-w-5xl px-4 sm:px-6">
-            <ol data-reveal className="dgi-reveal flex flex-col gap-4 sm:flex-row sm:items-stretch">
-              {t.about.meaning.map((m, i) => (
-                <li key={m.k} className="flex flex-1 items-start gap-3">
-                  <div className="flex flex-1 items-start gap-3 rounded-2xl border border-border bg-[color:var(--background)] p-5">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[color:var(--navy)] text-xs font-bold text-white">
-                      {m.k[0]}
+          <div className="mx-auto mt-12 max-w-6xl px-4 sm:px-6">
+            <ol data-reveal className="dgi-reveal grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
+              {t.about.meaning.map((m, i) => {
+                const tones = [
+                  { bg: "var(--navy)", soft: "rgba(15,45,104,0.08)", text: "#fff" },
+                  { bg: "var(--brand-green)", soft: "var(--brand-green-soft)", text: "#fff" },
+                  { bg: "var(--brand-cyan)", soft: "rgba(6,182,212,0.10)", text: "#fff" },
+                  { bg: "var(--brand-orange)", soft: "var(--brand-orange-soft)", text: "#fff" },
+                ];
+                const tone = tones[i % tones.length];
+                return (
+                  <li key={m.k} className="h-full">
+                    <div
+                      className="flex h-full flex-col gap-3 rounded-2xl border border-border bg-white p-5 transition-all hover:-translate-y-1 hover:shadow-[0_18px_40px_-25px_rgba(15,45,104,0.35)] sm:p-6"
+                      style={{ borderTop: `3px solid ${tone.bg}` }}
+                    >
+                      <div className="flex items-center gap-3">
+                        <div
+                          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl font-display text-sm font-extrabold"
+                          style={{ background: tone.bg, color: tone.text }}
+                        >
+                          {m.k[0]}
+                        </div>
+                        <div className="font-display text-lg font-bold text-[color:var(--navy-deep)] sm:text-xl">
+                          {m.k}
+                        </div>
+                      </div>
+                      <div className="text-[14px] leading-relaxed text-muted-foreground sm:text-[15px]" style={{ wordBreak: "keep-all" }}>
+                        {m.v}
+                      </div>
                     </div>
-                    <div>
-                      <div className="font-display text-base font-semibold text-[color:var(--navy-deep)]">{m.k}</div>
-                      <div className="mt-1 text-sm text-muted-foreground">{m.v}</div>
-                    </div>
-                  </div>
-                  {i < t.about.meaning.length - 1 && (
-                    <div className="hidden self-center text-muted-foreground sm:block"><Arrow /></div>
-                  )}
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ol>
           </div>
         </section>
