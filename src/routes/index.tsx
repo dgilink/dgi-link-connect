@@ -527,8 +527,8 @@ function Index() {
                 const tones = [
                   { bg: "var(--navy)", soft: "rgba(15,45,104,0.08)", text: "#fff" },
                   { bg: "var(--brand-green)", soft: "var(--brand-green-soft)", text: "#fff" },
-                  { bg: "var(--brand-cyan)", soft: "rgba(6,182,212,0.10)", text: "#fff" },
                   { bg: "var(--brand-orange)", soft: "var(--brand-orange-soft)", text: "#fff" },
+                  { bg: "var(--brand-cyan)", soft: "rgba(6,182,212,0.10)", text: "#fff" },
                 ];
                 const tone = tones[i % tones.length];
                 return (
