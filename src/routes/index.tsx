@@ -879,7 +879,8 @@ function CardScanCard({ t }: { t: typeof T[Lang]["cardscan"] }) {
             rel="noopener noreferrer"
             className="mt-1 inline-block font-display text-2xl font-bold tracking-tight text-[color:var(--navy-deep)] hover:text-[color:var(--navy)]"
           >
-            {t.title}
+            {t.title.replace(/\s*AI\s*$/, "")}
+            <span className="text-[color:var(--brand-orange)]"> AI</span>
           </a>
         </div>
       </div>
