@@ -758,14 +758,16 @@ function ProductShowcase() {
           className="group animate-dgi-float rounded-3xl border border-border bg-white p-5 shadow-[0_10px_40px_-20px_rgba(15,45,104,0.35)] transition-all hover:-translate-y-1 hover:border-[color:var(--brand-cyan)]"
           style={{ animationDelay: "0s" }}
         >
-          <img
-            src={cardscanIconAsset.url}
-            alt="CardScan AI 앱 아이콘"
-            width={120}
-            height={120}
-            loading="eager"
-            className="mx-auto block h-[120px] w-[120px] rounded-2xl"
-          />
+          <div className="mx-auto flex h-[120px] w-[120px] items-center justify-center overflow-hidden rounded-2xl bg-[#08152e]">
+            <img
+              src={cardscanIconAsset.url}
+              alt="CardScan AI 앱 아이콘"
+              width={120}
+              height={120}
+              loading="eager"
+              className="block h-[120px] w-[120px] rounded-2xl"
+            />
+          </div>
           <div className="mt-4 text-center">
             <div className="text-[11px] font-semibold uppercase tracking-wider text-[color:var(--brand-cyan)]">CardScan AI</div>
             <div className="mt-1 text-xs text-muted-foreground">Business contacts</div>
@@ -804,9 +806,9 @@ function CardScanCard({ t }: { t: typeof T[Lang]["cardscan"] }) {
   return (
     <article
       data-reveal
-      className="dgi-reveal group relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-[color:var(--navy-deep)] to-[color:var(--navy)] p-7 text-white shadow-[0_20px_60px_-30px_rgba(8,26,58,0.6)] transition-all hover:-translate-y-1"
+      className="dgi-reveal group relative overflow-hidden rounded-3xl border border-[rgba(15,45,104,0.14)] bg-gradient-to-br from-[#f3f7ff] to-[#e7eef9] p-7 text-[color:var(--navy-deep)] shadow-[0_20px_60px_-30px_rgba(8,26,58,0.25)] transition-all hover:-translate-y-1"
     >
-      <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[color:var(--brand-cyan)]/20 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[color:var(--brand-cyan)]/15 blur-3xl" />
 
       <div className="relative flex items-start gap-4">
         <a
@@ -814,7 +816,7 @@ function CardScanCard({ t }: { t: typeof T[Lang]["cardscan"] }) {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="CardScan AI Google Play 페이지 열기"
-          className="block shrink-0 rounded-2xl ring-1 ring-white/15 transition-transform hover:-translate-y-0.5"
+          className="block shrink-0 overflow-hidden rounded-2xl bg-[#08152e] ring-1 ring-[rgba(15,45,104,0.18)] transition-transform hover:-translate-y-0.5"
         >
           <img
             src={cardscanIconAsset.url}
@@ -822,32 +824,33 @@ function CardScanCard({ t }: { t: typeof T[Lang]["cardscan"] }) {
             width={88}
             height={88}
             className="block h-[88px] w-[88px] rounded-2xl sm:h-[100px] sm:w-[100px]"
+            style={{ mixBlendMode: "normal" }}
           />
         </a>
         <div className="min-w-0">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-[color:var(--brand-cyan)]/15 px-2.5 py-1 text-[11px] font-semibold text-[color:var(--brand-cyan)]">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-[color:var(--brand-cyan)]/15 px-2.5 py-1 text-[11px] font-semibold text-[#0a7a93]">
             {t.badge}
           </span>
-          <div className="mt-2 text-xs uppercase tracking-wider text-white/60">{t.type}</div>
+          <div className="mt-2 text-xs uppercase tracking-wider text-[color:var(--navy)]/60">{t.type}</div>
           <a
             href={CARDSCAN_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-1 inline-block font-display text-2xl font-bold tracking-tight text-white hover:text-[color:var(--brand-cyan)]"
+            className="mt-1 inline-block font-display text-2xl font-bold tracking-tight text-[color:var(--navy-deep)] hover:text-[color:var(--navy)]"
           >
             {t.title}
           </a>
         </div>
       </div>
 
-      <p className="relative mt-5 text-[15px] font-medium leading-snug text-white">{t.tagline}</p>
-      <p className="relative mt-2 text-sm leading-relaxed text-white/70">{t.desc}</p>
+      <p className="relative mt-5 text-[15px] font-medium leading-snug text-[color:var(--navy-deep)]">{t.tagline}</p>
+      <p className="relative mt-2 text-sm leading-relaxed text-muted-foreground">{t.desc}</p>
 
       <ul className="relative mt-6 grid grid-cols-2 gap-3">
         {t.features.map((f) => (
-          <li key={f.t} className="rounded-xl border border-white/10 bg-white/5 p-3">
-            <div className="text-[13px] font-semibold text-white">{f.t}</div>
-            <div className="mt-1 text-xs text-white/65">{f.d}</div>
+          <li key={f.t} className="rounded-xl border border-[rgba(15,45,104,0.10)] bg-white/70 p-3">
+            <div className="text-[13px] font-semibold text-[color:var(--navy-deep)]">{f.t}</div>
+            <div className="mt-1 text-xs text-muted-foreground">{f.d}</div>
           </li>
         ))}
       </ul>
@@ -866,7 +869,7 @@ function CardScanCard({ t }: { t: typeof T[Lang]["cardscan"] }) {
           href={CARDSCAN_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/10"
+          className="inline-flex items-center gap-2 rounded-xl border border-[rgba(15,45,104,0.18)] bg-white px-4 py-2.5 text-sm font-semibold text-[color:var(--navy-deep)] hover:bg-[#eef3fb]"
         >
           {t.ctaSecondary}
           <Arrow />
@@ -946,9 +949,9 @@ function KFarmCard({ t }: { t: typeof T[Lang]["kfarm"] }) {
 
 function FlowCard({ tone, label, steps }: { tone: "navy" | "green"; label: string; steps: readonly string[] }) {
   const accent = tone === "navy" ? "var(--brand-cyan)" : "var(--brand-green)";
-  const bg = tone === "navy" ? "from-[color:var(--navy-deep)] to-[color:var(--navy)]" : "from-white to-[color:var(--brand-green-soft)]";
-  const text = tone === "navy" ? "text-white" : "text-[color:var(--navy-deep)]";
-  const sub = tone === "navy" ? "text-white/65" : "text-muted-foreground";
+  const bg = tone === "navy" ? "from-[#f3f7ff] to-[#e7eef9]" : "from-white to-[color:var(--brand-green-soft)]";
+  const text = "text-[color:var(--navy-deep)]";
+  const sub = "text-muted-foreground";
   const aiColor = tone === "navy" ? "var(--brand-orange)" : "var(--brand-orange)";
   // Split "AI" off the end of the label so we can color it differently
   const aiMatch = label.match(/^(.*?)(AI)$/);
@@ -965,7 +968,7 @@ function FlowCard({ tone, label, steps }: { tone: "navy" | "green"; label: strin
           <li key={s} className="flex items-center gap-3">
             <span
               className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-bold"
-              style={{ background: accent as string, color: tone === "navy" ? "#081A3A" : "#fff" }}
+              style={{ background: accent as string, color: "#fff" }}
             >
               {i + 1}
             </span>
