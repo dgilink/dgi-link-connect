@@ -843,7 +843,7 @@ function ProductShowcase() {
               width={160}
               height={160}
               loading="eager"
-              className="max-h-full w-full object-contain"
+              className="max-h-full w-full object-contain mix-blend-multiply"
             />
           </div>
           <div className="mt-3 text-center">
@@ -957,7 +957,7 @@ function KFarmCard({ t }: { t: typeof T[Lang]["kfarm"] }) {
             alt="kFarmAI logo"
             width={110}
             height={88}
-            className="block h-[80px] w-[110px] object-contain sm:h-[88px]"
+            className="block h-[80px] w-[110px] object-contain mix-blend-multiply sm:h-[88px]"
           />
         </a>
         <div className="min-w-0">
