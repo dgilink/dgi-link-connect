@@ -463,7 +463,7 @@ function Index() {
         <section className="relative overflow-hidden">
           <BackgroundGlow />
           <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:py-28">
-            <div data-reveal className="dgi-reveal">
+            <div data-reveal className="dgi-reveal text-center lg:text-left">
               <p className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-3 py-1 text-xs font-medium tracking-wide text-[color:var(--navy)]">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-[color:var(--brand-green)]" />
                 {t.hero.eyebrow}
@@ -475,7 +475,7 @@ function Index() {
                 </span>
                 {t.hero.title[2]}
               </h1>
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:mx-0">
                 <span className="font-bold text-[color:var(--navy-deep)]">DGI</span>
                 <span className="font-bold text-[color:var(--brand-cyan)]"> Link</span>
                 {t.hero.desc[0].replace(/^DGI Link/, "")}
@@ -485,7 +485,7 @@ function Index() {
                 <span className="font-semibold text-[color:var(--brand-orange)]">{t.hero.desc[4]}</span>
                 {t.hero.desc[5]}
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
                 <a
                   href="#services"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-[color:var(--navy)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[color:var(--navy-deep)]"
