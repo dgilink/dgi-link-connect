@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import cardscanIconAsset from "@/assets/cardscanner-icon.png.asset.json";
 import kfarmLogoAsset from "@/assets/kfarmai-logo.png.asset.json";
+import dgiLinkLogoAsset from "@/assets/dgi-link-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -405,11 +406,12 @@ function Index() {
       >
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
           <a href="#top" className="flex items-center gap-2">
-            <LogoMark />
-            <span className="font-display text-[20px] font-extrabold tracking-tight">
-              <span className="text-[color:var(--navy-deep)]">DGI</span>
-              <span className="text-[color:var(--brand-cyan)]"> Link</span>
-            </span>
+            <img
+              src={dgiLinkLogoAsset.url}
+              alt="DGI Link"
+              className="block h-8 w-auto sm:h-9"
+              loading="eager"
+            />
           </a>
 
           <nav className="hidden items-center gap-8 md:flex">
@@ -617,11 +619,11 @@ function Index() {
             <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
               <div>
                 <div className="flex items-center gap-2">
-                  <LogoMark />
-                  <span className="font-display text-lg font-extrabold tracking-tight">
-                    <span className="text-[color:var(--navy-deep)]">DGI</span>
-                    <span className="text-[color:var(--brand-cyan)]"> Link</span>
-                  </span>
+                  <img
+                    src={dgiLinkLogoAsset.url}
+                    alt="DGI Link"
+                    className="block h-8 w-auto"
+                  />
                 </div>
                 <p className="mt-3 max-w-xs text-sm text-muted-foreground">{t.footer.tagline}</p>
               </div>
