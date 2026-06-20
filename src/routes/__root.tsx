@@ -87,6 +87,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@dgilink" },
+      { name: "twitter:title", content: "DGI Link | CardScan AI와 kFarmAI" },
+      { name: "twitter:description", content: "DGI Link는 명함과 업무 연락처를 관리하는 CardScan AI, 농업·식물 AI 커뮤니티 kFarmAI를 운영합니다." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/302b55ff-16d3-4981-bbdb-ca5026b171db/id-preview-6d46c8ca--6d920b50-d9fd-49ae-8a55-8aaf1e94c63e.lovable.app-1781946083215.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/302b55ff-16d3-4981-bbdb-ca5026b171db/id-preview-6d46c8ca--6d920b50-d9fd-49ae-8a55-8aaf1e94c63e.lovable.app-1781946083215.png" },
     ],
     links: [
       {
