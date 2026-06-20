@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import cardscanIconUrl from "@/assets/cardscanner-icon.png";
 import kfarmLogoUrl from "@/assets/kfarmai-logo.png";
 import dgiLinkLogoUrl from "@/assets/dgi-link-logo.png";
+import dgiLinkIconUrl from "@/assets/dgi-link-icon.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -405,13 +406,16 @@ function Index() {
         }`}
       >
         <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6">
-          <a href="#top" className="flex items-center gap-2">
+          <a href="#top" className="flex items-center gap-2.5">
             <img
-              src={dgiLinkLogoUrl}
-              alt="DGI Link"
-              className="block h-14 w-auto sm:h-16"
+              src={dgiLinkIconUrl}
+              alt=""
+              className="block h-12 w-12"
               loading="eager"
             />
+            <span className="font-display text-[28px] font-bold tracking-tight text-[color:var(--navy-deep)]">
+              DGI Link
+            </span>
           </a>
 
           <nav className="hidden items-center gap-8 md:flex">
@@ -829,10 +833,10 @@ function ProductShowcase() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="kFarmAI 사이트 열기"
-          className="group animate-dgi-float rounded-3xl border border-border bg-white px-3 py-4 shadow-[0_10px_40px_-20px_rgba(54,168,82,0.45)] transition-all hover:-translate-y-1 hover:border-[color:var(--brand-green)]"
+          className="group animate-dgi-float rounded-3xl border border-border bg-[#dcfce7] px-3 py-4 shadow-[0_10px_40px_-20px_rgba(54,168,82,0.45)] transition-all hover:-translate-y-1 hover:border-[color:var(--brand-green)]"
           style={{ animationDelay: "1s" }}
         >
-          <div className="flex aspect-square w-full items-center justify-center rounded-2xl bg-[#DCEBD3] p-3">
+          <div className="flex aspect-square w-full items-center justify-center rounded-2xl p-3">
             <img
               src={kfarmLogoUrl}
               alt="kFarmAI logo"
