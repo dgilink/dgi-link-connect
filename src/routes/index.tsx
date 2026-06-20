@@ -404,12 +404,12 @@ function Index() {
             : "border-b border-transparent bg-white/0"
         }`}
       >
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+        <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6">
           <a href="#top" className="flex items-center gap-2">
             <img
               src={dgiLinkLogoAsset.url}
               alt="DGI Link"
-              className="block h-8 w-auto sm:h-9"
+              className="block h-12 w-auto sm:h-14"
               loading="eager"
             />
           </a>
