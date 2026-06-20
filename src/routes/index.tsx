@@ -563,7 +563,7 @@ function Index() {
                         <div
                           className={`font-display font-bold text-[color:var(--navy-deep)] ${
                             m.k === "Intelligence"
-                              ? "whitespace-nowrap text-base sm:text-lg"
+                              ? "whitespace-nowrap text-sm tracking-tight sm:text-base"
                               : "text-lg sm:text-xl"
                           }`}
                         >
@@ -968,7 +968,7 @@ function KFarmCard({ t }: { t: typeof T[Lang]["kfarm"] }) {
       data-reveal
       className="dgi-reveal group relative overflow-hidden rounded-3xl border border-border bg-white p-7 shadow-[0_20px_60px_-30px_rgba(54,168,82,0.35)] transition-all hover:-translate-y-1"
     >
-      <div className="relative flex items-start gap-4">
+      <div className="relative flex items-center gap-4">
         <a
           href={KFARM_URL}
           target="_blank"
