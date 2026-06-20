@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보처리방침 | DGI Link</title>
+  <meta name="description" content="DGI Link 개인정보처리방침">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #ffffff;
+      --bg2: #f8f9fa;
+      --green: #16a34a;
+      --black: #111111;
+      --gray1: #444444;
+      --gray2: #888888;
+      --border: #e5e7eb;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--black);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--black);
+      text-decoration: none;
+    }
+    .nav-back {
+      font-size: 13px;
+      color: var(--gray2);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--black); }
+    .lang-switch { display: flex; gap: 8px; }
+    .lang-btn {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gray2);
+      background: none;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      padding: 4px 10px;
+      border-radius: 6px;
+      transition: all 0.2s;
+      font-family: var(--font-body);
+    }
+    .lang-btn.active { color: var(--black); border-color: var(--black); background: #f3f4f6; }
+    .lang-btn:hover { color: var(--black); }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+    }
+    .page-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+    .page-title {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      color: var(--black);
+    }
+    .page-date {
+      font-size: 13px;
+      color: var(--gray2);
+      margin-bottom: 48px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section { margin-bottom: 44px; }
+    h2 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 14px;
+      padding-left: 12px;
+      border-left: 3px solid var(--green);
+    }
+    p { color: var(--gray1); margin-bottom: 12px; line-height: 1.85; }
+    ul { color: var(--gray1); padding-left: 20px; margin-bottom: 12px; }
+    ul li { margin-bottom: 6px; line-height: 1.7; }
+    .info-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 12px;
+    }
+    .info-row {
+      display: flex;
+      gap: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-label { color: var(--green); font-weight: 600; min-width: 160px; flex-shrink: 0; }
+    .info-value { color: var(--gray1); }
+    strong { color: var(--black); font-weight: 600; }
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .footer-logo { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--black); margin-bottom: 12px; }
+    .footer-links { display: flex; gap: 20px; justify-content: center; list-style: none; margin-bottom: 12px; flex-wrap: wrap; }
+    .footer-links a { font-size: 13px; color: var(--gray2); text-decoration: none; }
+    .footer-links a:hover { color: var(--black); }
+    .footer-copy { font-size: 12px; color: var(--gray2); }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+    @media (max-width: 600px) {
+      .info-row { flex-direction: column; gap: 4px; }
+      .info-label { min-width: unset; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">DGI Link</a>
+  <div style="display:flex; align-items:center; gap:16px;">
+    <a href="index.html" class="nav-back" id="nav-back">← 홈으로</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" onclick="setLang('ko')">KO</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('ja')">JA</button>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- 한국어 -->
+  <div class="lang-content active" id="content-ko">
+    <p class="page-label">Privacy Policy</p>
+    <h1 class="page-title">개인정보처리방침</h1>
+    <p class="page-date">시행일: 2026년 06월 18일 &nbsp;|&nbsp; 최종 수정일: 2026년 06월 18일</p>
+
+    <div class="section">
+      <h2>제1조 개인정보 수집 목적 및 항목</h2>
+      <p>디지아이링크(이하 "회사")는 아래의 목적으로 개인정보를 수집합니다.</p>
+      <ul>
+        <li><strong>CardScan AI:</strong> 명함 OCR 인식, 연락처 저장, 만남 기록, 서비스 제공 및 결제 처리</li>
+        <li><strong>kFarmAI:</strong> 커뮤니티 서비스 제공, AI 진단, 농자재 정보 제공</li>
+        <li><strong>웹사이트:</strong> 문의 응대, 서비스 개선, 통계 분석</li>
+      </ul>
+      <p>수집하는 개인정보 항목:</p>
+      <ul>
+        <li>필수: 이메일 주소, 기기 식별자</li>
+        <li>결제 시: 결제 수단 정보 (Stripe·토스페이먼츠를 통해 처리, 회사는 저장하지 않음)</li>
+        <li>선택: 이름, 전화번호, 직책, 회사명</li>
+        <li>자동 수집: IP 주소, 브라우저 정보, 접속 로그, 쿠키</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>제2조 개인정보 보유 및 이용 기간</h2>
+      <ul>
+        <li>회원 탈퇴 시까지 (탈퇴 후 30일 이내 파기)</li>
+        <li>관계 법령에 따른 보존 기간:
+          <ul>
+            <li>전자상거래 관련 기록: 5년</li>
+            <li>소비자 불만·분쟁 기록: 3년</li>
+            <li>접속 로그: 3개월</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>제3조 개인정보의 제3자 제공</h2>
+      <p>회사는 원칙적으로 이용자의 개인정보를 외부에 제공하지 않습니다. 단, 아래의 경우는 예외입니다.</p>
+      <ul>
+        <li>이용자가 사전에 동의한 경우</li>
+        <li>법령의 규정에 의거하거나 수사기관의 요구가 있는 경우</li>
+      </ul>
+      <p>결제 처리를 위해 Stripe(글로벌), 토스페이먼츠(국내)에 최소한의 정보가 전달됩니다.</p>
+    </div>
+
+    <div class="section">
+      <h2>제4조 개인정보 처리 위탁</h2>
+      <div class="info-box">
+        <div class="info-row">
+          <span class="info-label">Anthropic (Claude API)</span>
+          <span class="info-value">AI 진단 처리</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Supabase</span>
+          <span class="info-value">데이터베이스 저장</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Stripe</span>
+          <span class="info-value">글로벌 결제 처리</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">토스페이먼츠</span>
+          <span class="info-value">국내 결제 처리</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>제5조 정보주체의 권리</h2>
+      <p>이용자는 언제든지 개인정보 열람·정정·삭제·처리정지를 요청할 수 있습니다.</p>
+      <p>요청: <strong>contact@dgilink.com</strong> &nbsp;→&nbsp; 7일 이내 처리</p>
+    </div>
+
+    <div class="section">
+      <h2>제6조 쿠키 정책</h2>
+      <p>서비스 개선을 위해 쿠키를 사용할 수 있습니다. 브라우저 설정을 통해 거부할 수 있으나 일부 서비스가 제한될 수 있습니다.</p>
+    </div>
+
+    <div class="section">
+      <h2>제7조 사업자 및 개인정보 보호책임자 정보</h2>
+      <div class="info-box">
+        <div class="info-row">
+          <span class="info-label">상호명</span>
+          <span class="info-value">디지아이링크</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">대표자</span>
+          <span class="info-value">송성민</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">주소</span>
+          <span class="info-value">전라남도 순천시 해룡면 좌야로 150, 701동 506호</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">통신판매업 신고번호</span>
+          <span class="info-value">제 2026-전남순천-7250 호</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">이메일</span>
+          <span class="info-value">contact@dgilink.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- English -->
+  <div class="lang-content" id="content-en">
+    <p class="page-label">Privacy Policy</p>
+    <h1 class="page-title">Privacy Policy</h1>
+    <p class="page-date">Effective: June 18, 2026 &nbsp;|&nbsp; Last Updated: June 18, 2026</p>
+
+    <div class="section">
+      <h2>1. Information We Collect</h2>
+      <p>DGI Link (디지아이링크) collects the following information to provide our services:</p>
+      <ul>
+        <li><strong>CardScan AI:</strong> Business card OCR, contact saving, meeting records, payments</li>
+        <li><strong>kFarmAI:</strong> Community services, AI diagnosis, agricultural information</li>
+        <li><strong>Website:</strong> Inquiry responses, service improvement, analytics</li>
+      </ul>
+      <p>Information collected:</p>
+      <ul>
+        <li>Required: Email address, device identifier</li>
+        <li>Payment: Processed via Stripe / TossPayments — not stored by us</li>
+        <li>Optional: Name, phone number, job title, company name</li>
+        <li>Automatic: IP address, browser info, access logs, cookies</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>2. Data Retention</h2>
+      <ul>
+        <li>Until account deletion (deleted within 30 days of closure)</li>
+        <li>As required by law: e-commerce records 5 years, dispute records 3 years, access logs 3 months</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>3. Sharing Your Information</h2>
+      <p>We do not sell or share your data except with your consent, when required by law, or minimally with Stripe and TossPayments for payment processing.</p>
+    </div>
+
+    <div class="section">
+      <h2>4. Service Providers</h2>
+      <div class="info-box">
+        <div class="info-row">
+          <span class="info-label">Anthropic (Claude API)</span>
+          <span class="info-value">AI processing</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Supabase</span>
+          <span class="info-value">Database storage</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Stripe</span>
+          <span class="info-value">Global payment processing</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">TossPayments</span>
+          <span class="info-value">Korea payment processing</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>5. Your Rights</h2>
+      <p>You may request access, correction, deletion, or restriction of your data at any time.</p>
+      <p>Contact: <strong>contact@dgilink.com</strong> &nbsp;→&nbsp; Response within 7 business days</p>
+    </div>
+
+    <div class="section">
+      <h2>6. Cookies</h2>
+      <p>We use cookies to improve our services. You may disable them via browser settings, though some features may be limited.</p>
+    </div>
+
+    <div class="section">
+      <h2>7. Business Information</h2>
+      <div class="info-box">
+        <div class="info-row">
+          <span class="info-label">Company</span>
+          <span class="info-value">DGI Link (디지아이링크)</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Representative</span>
+          <span class="info-value">Seongmin Song</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Address</span>
+          <span class="info-value">701-506, Jwaya-ro 150, Haeryong-myeon, Suncheon-si, Jeollanam-do, Korea</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Mail Order No.</span>
+          <span class="info-value">제 2026-전남순천-7250 호</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Email</span>
+          <span class="info-value">contact@dgilink.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 日本語 -->
+  <div class="lang-content" id="content-ja">
+    <p class="page-label">Privacy Policy</p>
+    <h1 class="page-title">プライバシーポリシー</h1>
+    <p class="page-date">施行日：2026年06月18日 &nbsp;|&nbsp; 最終更新：2026年06月18日</p>
+
+    <div class="section">
+      <h2>第1条 個人情報の収集目的および項目</h2>
+      <p>デジアイリンク（以下「当社」）は以下の目的で個人情報を収集します。</p>
+      <ul>
+        <li><strong>CardScan AI：</strong>名刺OCR認識、連絡先保存、出会いの記録、決済処理</li>
+        <li><strong>kFarmAI：</strong>コミュニティサービス、AI診断、農業情報提供</li>
+        <li><strong>ウェブサイト：</strong>お問い合わせ対応、サービス改善</li>
+      </ul>
+      <p>収集する情報：</p>
+      <ul>
+        <li>必須：メールアドレス、デバイス識別子</li>
+        <li>決済時：Stripe・TossPayments経由で処理（当社は保存しません）</li>
+        <li>任意：氏名、電話番号、役職、会社名</li>
+        <li>自動収集：IPアドレス、ブラウザ情報、アクセスログ、Cookie</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>第2条 保有期間</h2>
+      <ul>
+        <li>退会時まで（退会後30日以内に削除）</li>
+        <li>法令による保存：電子商取引記録5年、紛争記録3年、ログ3ヶ月</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>第3条 第三者提供</h2>
+      <p>原則として第三者に提供しません。同意がある場合、法令による場合、またはStripe・TossPaymentsへの最小限の決済情報提供を除きます。</p>
+    </div>
+
+    <div class="section">
+      <h2>第4条 委託先</h2>
+      <div class="info-box">
+        <div class="info-row">
+          <span class="info-label">Anthropic (Claude API)</span>
+          <span class="info-value">AI処理</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Supabase</span>
+          <span class="info-value">データベース保存</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Stripe</span>
+          <span class="info-value">グローバル決済処理</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">TossPayments</span>
+          <span class="info-value">韓国内決済処理</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>第5条 お客様の権利</h2>
+      <p>個人情報の閲覧・訂正・削除・処理停止をいつでも請求できます。</p>
+      <p>お問い合わせ：<strong>contact@dgilink.com</strong> &nbsp;→&nbsp; 7営業日以内に対応</p>
+    </div>
+
+    <div class="section">
+      <h2>第6条 Cookie</h2>
+      <p>サービス改善のためCookieを使用する場合があります。ブラウザ設定で拒否できますが、一部機能が制限される場合があります。</p>
+    </div>
+
+    <div class="section">
+      <h2>第7条 事業者情報</h2>
+      <div class="info-box">
+        <div class="info-row">
+          <span class="info-label">社名</span>
+          <span class="info-value">デジアイリンク（DGI Link）</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">代表者</span>
+          <span class="info-value">ソン・ソンミン</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">所在地</span>
+          <span class="info-value">韓国 全羅南道 順天市 海龍面 佐野路 150, 701棟 506号</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">通信販売業届出番号</span>
+          <span class="info-value">제 2026-전남순천-7250 호</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">メール</span>
+          <span class="info-value">contact@dgilink.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">DGI Link</div>
+  <ul class="footer-links">
+    <li><a href="index.html">홈</a></li>
+    <li><a href="privacy.html">개인정보처리방침</a></li>
+    <li><a href="terms.html">이용약관</a></li>
+    <li><a href="mailto:contact@dgilink.com">문의</a></li>
+  </ul>
+  <p class="footer-copy">© 2026 DGI Link (디지아이링크). All rights reserved.</p>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+    document.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('content-' + lang).classList.add('active');
+    const labels = { ko: '← 홈으로', en: '← Back to Home', ja: '← ホームへ' };
+    document.getElementById('nav-back').textContent = labels[lang];
+  }
+</script>
+</body>
+</html>

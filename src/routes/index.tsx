@@ -9,20 +9,21 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "DGI Link | CardScan AI와 kFarmAI" },
+      { title: "DGI Link — 흩어진 것을 연결합니다" },
       {
         name: "description",
         content:
-          "DGI Link는 명함과 업무 연락처를 관리하는 CardScan AI, 농업·식물 AI 커뮤니티 kFarmAI를 운영합니다.",
+          "DGI Link는 명함 스캔·만남 기록 앱 CardScan AI와 농업·식물 AI 커뮤니티 kFarmAI를 운영하는 디지털 인텔리전스 브랜드입니다.",
       },
-      { property: "og:title", content: "DGI Link | CardScan AI와 kFarmAI" },
+      { property: "og:title", content: "DGI Link — 흩어진 것을 연결합니다" },
       {
         property: "og:description",
         content:
-          "흩어진 정보와 사람을 데이터·AI로 연결하는 브랜드. CardScan AI · kFarmAI 운영.",
+          "DGI Link connects scattered data and people through AI. We operate CardScan AI and kFarmAI — real solutions for real problems.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
+      { name: "twitter:title", content: "DGI Link — 흩어진 것을 연결합니다" },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [
@@ -60,67 +61,68 @@ const T = {
     nav: { home: "Home", services: "Services", about: "About", contact: "Contact" },
     hero: {
       eyebrow: "Data · Green · Intelligence",
-      title: ["흩어진 것을 ", "연결", "합니다."] as readonly string[],
-      desc:
-        ["DGI Link", "는 현장에 흩어진 정보와 사람을 ", "데이터", "와 ", "AI", "로 연결해 더 간단하고 효율적인 경험을 만듭니다."] as readonly string[],
+      title: ["흩어진 것을\n", "연결", "합니다."] as readonly string[],
+      desc: "DGI Link는 현장의 불편함을 발견하고\n데이터와 AI로 연결해 사람의 시간을 돌려줍니다.",
       ctaPrimary: "서비스 살펴보기",
-      ctaSecondary: "브랜드 이야기",
+      ctaSecondary: "브랜드 스토리",
     },
     services: {
-      eyebrow: "Our Services",
-      title: "현장의 문제를 해결하는 두 가지 서비스",
-      desc:
-        "업무 연락처 관리부터 농업·식물 정보까지, 서로 다른 현장의 불편을 더 간단한 방식으로 해결합니다.",
+      eyebrow: "현재 운영 서비스",
+      title: "두 개의 문제를\n해결하고 있습니다",
+      desc: "명함 한 장, 작물 사진 한 장.\n찍으면 AI가 해결합니다.",
     },
     cardscan: {
-      badge: "Available on Google Play",
+      badge: "📇 App · Google Play",
       type: "업무 연락처 앱",
       title: "CardScan AI",
-      tagline: "명함이 있어도, 없어도 사람과 만남을 기억하는 업무 연락처 앱",
+      tagline: "만남을 기억합니다",
       desc:
-        "명함을 스캔하면 이름, 회사, 부서, 직책, 연락처, 이메일, 주소까지 자동으로 정리합니다. 명함이 없어도 직접 입력하거나 휴대폰 연락처에서 가져와 업무 연락처로 관리할 수 있어요.",
+        "명함을 찍으면 연락처가 저장됩니다.\n누구를, 어디서, 무슨 약속을 했는지도 함께 기록합니다.",
       features: [
-        { t: "AI 명함 스캔", d: "명함 정보를 빠르게 인식하고 수정" },
-        { t: "업무 연락처 관리", d: "명함이 없어도 직접 등록·관리" },
-        { t: "만남·약속 기록", d: "장소, 행사, 메모, 다음 행동 저장" },
-        { t: "행사·내보내기", d: "행사별 관리 · Excel/CSV 내보내기" },
+        "AI 명함 스캔 · 연락처 즉시 저장",
+        "전화 수신 시 회사·이름·직책 자동 표시",
+        "만남 장소·대화·약속 함께 기록",
+        "행사별 인맥 정리 · Excel 내보내기",
+        "한국·영어·일본어 명함 지원",
       ],
+      tags: ["🇰🇷 한국", "🇯🇵 일본", "🌐 글로벌", "영업·보험·부동산"],
       ctaPrimary: "Google Play에서 보기",
       ctaSecondary: "자세히 보기",
     },
     kfarm: {
-      badge: "AI Farm Community",
+      badge: "🌱 Platform · 운영중",
       type: "농업·식물 AI 플랫폼",
       title: "kFarmAI",
-      tagline: "농업과 식물의 문제를 정보, AI, 사람으로 연결하는 커뮤니티 플랫폼",
+      tagline: "식물 정보, 이제 한 곳에서",
       desc:
-        "농업인, 텃밭·홈가드닝·반려식물 사용자가 식물 문제를 찾고 해결할 수 있도록 공식기관 기반 정보, AI 진단, 주변 농자재 정보와 커뮤니티를 연결합니다.",
+        "농업인·텃밭·홈가드닝·반려식물 사용자를 하나로 잇는\nAI 기반 식물 커뮤니티 플랫폼입니다.",
       features: [
-        { t: "AI 식물 진단", d: "사진 기반 증상 확인" },
-        { t: "농업·식물 정보", d: "공식기관 자료 기반 탐색" },
-        { t: "주변 농자재 연결", d: "농약사·농자재 업체 정보" },
-        { t: "커뮤니티", d: "질문·경험·해결 방법 공유" },
+        "작물 사진 찍으면 AI가 즉시 진단",
+        "전국 농약사 지도 3,019개",
+        "농자재 정보 · 보조사업 안내 · 계산기",
+        "식물 직거래 · 원예 클래스 · 커뮤니티",
       ],
+      tags: ["🇰🇷 한국", "농업인", "홈가드닝", "반려식물"],
       cta: "kFarmAI 방문하기",
     },
     about: {
-      eyebrow: "About",
-      title: "데이터와 현장을 연결하는 브랜드",
+      eyebrow: "About DGI Link",
+      title: "데이터와 현장을\n연결하는 브랜드",
       desc:
-        "DGI Link는 단순히 앱을 만드는 브랜드가 아닙니다. 현장에서 반복되는 불편을 발견하고, 정보를 정리하고, 기술을 연결해 사람들이 더 중요한 일에 집중할 수 있도록 돕습니다.",
+        "우리는 앱을 만드는 회사가 아닙니다.\n현장의 불편함을 AI로 연결해 사람의 시간을 돌려주는 브랜드입니다.",
       meaning: [
-        { k: "Data", v: "흩어진 정보를 구조화합니다." },
-        { k: "Green", v: "농업과 현장의 문제를 이해합니다." },
-        { k: "Intelligence", v: "AI를 실용적인 도구로 사용합니다." },
-        { k: "Link", v: "사람과 정보, 문제와 해결을 연결합니다." },
+        { k: "Data", v: "흩어진 정보를 모으고 구조화합니다" },
+        { k: "Green", v: "농업·식물·환경, 현장을 이해합니다" },
+        { k: "Intelligence", v: "AI를 실용적인 도구로 바꿉니다" },
+        { k: "Link", v: "사람과 정보, 문제와 해결을 연결합니다" },
       ],
     },
     story: {
       eyebrow: "Brand Story",
-      quote: "세상은 정보가 부족한 것이 아니라, 연결이 끊겨 있을 뿐입니다.",
-      p1: "명함은 지갑이나 서랍에 남고, 중요한 만남과 약속은 잊힙니다.",
-      p2: "농업과 식물 정보는 여러 사이트와 커뮤니티에 흩어져 있어 필요한 답을 찾기 어렵습니다.",
-      p3: "DGI Link는 이렇게 흩어진 정보와 사람을 하나의 흐름으로 연결합니다.",
+      quote: "세상은 정보가 부족한 것이 아닙니다.\n연결이 끊겨 있을 뿐입니다.",
+      p1: "당신은 오늘도 누군가를 만났습니다.\n회의에서, 박람회에서, 거래처에서.\n명함을 받고 악수를 나눴지만\n그 만남은 지갑 속 명함 한 장으로 끝났습니다.",
+      p2: "농부는 오늘도 작물이 이상한 것을 발견했습니다.\n네이버 카페, 블로그, 유튜브를 전전했지만\n결국 답을 찾지 못했습니다.",
+      p3: "DGI Link는 이 문제를 발견했습니다.\n현장의 불편함을 데이터로 정리하고,\nAI로 연결하고,\n사람의 시간과 기회를 돌려주는 브랜드입니다.",
     },
     flow: {
       eyebrow: "How we connect",
@@ -131,10 +133,15 @@ const T = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "함께 연결할 이야기가 있나요?",
-      desc: "제휴, 문의, 또는 서비스 사용에 대해 알려주세요.",
+      title: "함께 만들어 갑니다",
+      desc: "제휴, B2B 문의, 서비스 관련 이야기를 들려주세요.",
       items: [
-        { k: "일반 문의 · 제휴/B2B", v: "프로젝트와 협업 제안 환영합니다.", action: "문의하기" },
+        {
+          k: "일반 문의 · 제휴/B2B",
+          v: "협업과 파트너십 제안을 환영합니다.",
+          action: "문의하기",
+          href: "mailto:contact@dgilink.com",
+        },
         { k: "CardScan AI", v: "Google Play에서 다운로드", action: "앱 보기", href: CARDSCAN_URL },
         { k: "kFarmAI", v: "농업·식물 커뮤니티 방문", action: "사이트 열기", href: KFARM_URL },
       ],
@@ -152,69 +159,68 @@ const T = {
     nav: { home: "Home", services: "Services", about: "About", contact: "Contact" },
     hero: {
       eyebrow: "Data · Green · Intelligence",
-      title: ["Connecting ", "What's", " Scattered."] as readonly string[],
-      desc:
-        ["DGI Link", " connects scattered information and people on the ground through ", "data", " and ", "AI", " — for simpler, more efficient work."] as readonly string[],
-      ctaPrimary: "Explore services",
-      ctaSecondary: "Our story",
+      title: ["Connecting\n", "What's", " Scattered."] as readonly string[],
+      desc: "We find friction in real life, bridge it with AI,\nand give people back their time.",
+      ctaPrimary: "View Services",
+      ctaSecondary: "Brand Story",
     },
     services: {
       eyebrow: "Our Services",
-      title: "Two services solving real problems on the ground",
-      desc:
-        "From business contacts to farming and plant care — we tackle very different problems in a simpler way.",
+      title: "Two Problems.\nTwo Solutions.",
+      desc: "One photo of a card. One photo of a plant.\nAI handles the rest.",
     },
     cardscan: {
-      badge: "Available on Google Play",
-      type: "Business contacts app",
+      badge: "📇 App · Google Play",
+      type: "Business Contact App",
       title: "CardScan AI",
-      tagline:
-        "Remember every person and meeting — with or without a business card.",
+      tagline: "We Remember Your Meetings",
       desc:
-        "Scan a business card and we auto-organize name, company, role, phone, email, and address. No card? Enter it manually or import from your phone contacts.",
+        "Scan a card — contacts saved instantly.\nWho you met, where, what you promised — all remembered.",
       features: [
-        { t: "AI Card Scan", d: "Fast recognition with easy edits" },
-        { t: "Contact Manager", d: "Add and manage even without a card" },
-        { t: "Meeting Notes", d: "Place, event, notes, next actions" },
-        { t: "Events & Export", d: "Event grouping · Excel/CSV export" },
+        "AI card scan · instant contact save",
+        "Caller ID shows company, name, title",
+        "Record meeting place, notes, next actions",
+        "Organize by event · Export to Excel",
+        "Korean, English, Japanese cards supported",
       ],
+      tags: ["🇰🇷 Korea", "🇯🇵 Japan", "🌐 Global", "Sales · Insurance · Real Estate"],
       ctaPrimary: "View on Google Play",
       ctaSecondary: "Learn more",
     },
     kfarm: {
-      badge: "AI Farm Community",
-      type: "Agriculture & plant AI platform",
+      badge: "🌱 Platform · 운영중",
+      type: "Agriculture & Plant AI Platform",
       title: "kFarmAI",
-      tagline:
-        "A community platform connecting plant problems with information, AI, and people.",
+      tagline: "All Plant Info, One Place",
       desc:
-        "For farmers, gardeners, and plant lovers — official sources, AI diagnosis, nearby agri-supplies, and a community, all in one place.",
+        "An AI-powered community connecting farmers,\nhome gardeners, and plant lovers in one place.",
       features: [
-        { t: "AI Plant Diagnosis", d: "Identify symptoms from photos" },
-        { t: "Verified Info", d: "From official institutions" },
-        { t: "Nearby Suppliers", d: "Agri-chemical and supply shops" },
-        { t: "Community", d: "Ask, share, solve together" },
+        "AI crop diagnosis from one photo",
+        "3,019 agricultural stores nationwide",
+        "Supply info · Subsidy guide · Calculator",
+        "Plant marketplace · Gardening classes",
       ],
+      tags: ["🇰🇷 Korea", "Farmers", "Home Gardening", "Plant Parents"],
       cta: "Visit kFarmAI",
     },
     about: {
-      eyebrow: "About",
-      title: "A brand that links data to the field",
+      eyebrow: "About DGI Link",
+      title: "A Brand That Connects\nData and Real Life",
       desc:
-        "DGI Link is more than apps. We notice the friction that repeats on the ground, organize the information, and connect the technology — so people can focus on what really matters.",
+        "We are not an app company.\nWe bridge real-world friction with AI and give people back their time.",
       meaning: [
-        { k: "Data", v: "Structure scattered information." },
-        { k: "Green", v: "Understand field and farming problems." },
-        { k: "Intelligence", v: "Use AI as a practical tool." },
-        { k: "Link", v: "Connect people, information, and solutions." },
+        { k: "Data", v: "We collect and structure scattered data" },
+        { k: "Green", v: "We understand agriculture, nature, and field industries" },
+        { k: "Intelligence", v: "We turn AI into practical, invisible tools" },
+        { k: "Link", v: "We connect people, data, problems and solutions" },
       ],
     },
     story: {
       eyebrow: "Brand Story",
-      quote: "The world doesn't lack information — it lacks connection.",
-      p1: "Business cards end up in wallets and drawers; important meetings get forgotten.",
-      p2: "Farming and plant info is scattered across sites and communities — answers are hard to find.",
-      p3: "DGI Link weaves these scattered pieces of information and people into a single flow.",
+      quote: "The world doesn't lack information.\nIt lacks connection.",
+      p1: "You met someone today.\nAt a conference, a trade show, a client meeting.\nYou shook hands and exchanged cards —\nbut that moment ended as a card in your wallet.",
+      p2: "A farmer noticed something wrong with the crops.\nHe searched online for hours —\nand still couldn't find a clear answer.",
+      p3: "DGI Link was built to solve this.\nWe find friction, structure it with data,\nbridge it with AI,\nand give people back their time.",
     },
     flow: {
       eyebrow: "How we connect",
@@ -225,16 +231,21 @@ const T = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "Have something to connect?",
-      desc: "Reach out about partnerships, questions, or product feedback.",
+      title: "Let's Connect",
+      desc: "Tell us about partnerships, B2B, or anything about our services.",
       items: [
-        { k: "General · B2B", v: "Partnerships and projects welcome.", action: "Get in touch" },
-        { k: "CardScan AI", v: "Download on Google Play", action: "Open app page", href: CARDSCAN_URL },
-        { k: "kFarmAI", v: "Visit the community", action: "Open site", href: KFARM_URL },
+        {
+          k: "Inquiries · Partnership",
+          v: "We welcome collaboration proposals.",
+          action: "Contact Us",
+          href: "mailto:contact@dgilink.com",
+        },
+        { k: "CardScan AI", v: "Download on Google Play", action: "View App", href: CARDSCAN_URL },
+        { k: "kFarmAI", v: "Visit Agriculture & Plant Community", action: "Visit Site", href: KFARM_URL },
       ],
     },
     footer: {
-      tagline: "Connecting what's scattered.",
+      tagline: "Connecting What's Scattered.",
       sections: "Services",
       privacy: "Privacy",
       terms: "Terms",
@@ -246,67 +257,68 @@ const T = {
     nav: { home: "Home", services: "Services", about: "About", contact: "Contact" },
     hero: {
       eyebrow: "Data · Green · Intelligence",
-      title: ["散らばったものを、", "つなぐ", "。"] as readonly string[],
-      desc:
-        ["DGI Link", "は、現場に散らばった情報と人を", "データ", "と", "AI", "でつなぎ、よりシンプルで効率的な体験をつくります。"] as readonly string[],
+      title: ["散らばったものを、\n", "つなぎ", "ます。"] as readonly string[],
+      desc: "現場の不便さを見つけ、AIでつなぎ、\n人の時間とチャンスを取り戻します。",
       ctaPrimary: "サービスを見る",
       ctaSecondary: "ブランドストーリー",
     },
     services: {
-      eyebrow: "Our Services",
-      title: "現場の課題を解決する2つのサービス",
-      desc:
-        "ビジネス連絡先から農業・植物情報まで、異なる現場の不便をよりシンプルに解決します。",
+      eyebrow: "サービス",
+      title: "ふたつの問題を\n解決しています",
+      desc: "名刺1枚、作物の写真1枚。\n撮るだけでAIが解決します。",
     },
     cardscan: {
-      badge: "Available on Google Play",
+      badge: "📇 App · Google Play",
       type: "ビジネス連絡先アプリ",
       title: "CardScan AI",
-      tagline: "名刺があっても、なくても、人と出会いを記録できる連絡先アプリ。",
+      tagline: "出会いを、記憶します",
       desc:
-        "名刺をスキャンすると、氏名・会社・部署・役職・電話・メール・住所まで自動で整理。名刺がなくても直接入力や電話帳からの取り込みで管理できます。",
+        "名刺を撮るだけで連絡先が保存されます。\n誰と、どこで、何を約束したかも一緒に記録します。",
       features: [
-        { t: "AI 名刺スキャン", d: "高速認識と簡単修正" },
-        { t: "連絡先管理", d: "名刺がなくても登録可能" },
-        { t: "ミーティング記録", d: "場所・イベント・メモ・次の行動" },
-        { t: "イベント・書き出し", d: "イベント別管理 · Excel/CSV" },
+        "AI名刺スキャン・連絡先即時保存",
+        "着信時に会社名・氏名・役職を表示",
+        "場所・会話・約束を一緒に記録",
+        "イベント別整理・Excelエクスポート",
+        "韓国語・英語・日本語の名刺対応",
       ],
+      tags: ["🇰🇷 韓国", "🇯🇵 日本", "🌐 グローバル", "営業・保険・不動産"],
       ctaPrimary: "Google Playで見る",
       ctaSecondary: "詳しく見る",
     },
     kfarm: {
-      badge: "AI Farm Community",
+      badge: "🌱 Platform · 운영중",
       type: "農業・植物AIプラットフォーム",
       title: "kFarmAI",
-      tagline: "農業と植物の課題を、情報・AI・人でつなぐコミュニティ。",
+      tagline: "植物情報を、一か所に",
       desc:
-        "農家・家庭菜園・観葉植物のユーザー向けに、公的機関情報、AI診断、周辺の農資材、コミュニティを1つにまとめます。",
+        "農業従事者・家庭菜園・ホームガーデニング・\n観葉植物ユーザーをつなぐAIコミュニティです。",
       features: [
-        { t: "AI 植物診断", d: "写真から症状を確認" },
-        { t: "信頼できる情報", d: "公的機関ベース" },
-        { t: "近隣の農資材", d: "農薬店・資材店情報" },
-        { t: "コミュニティ", d: "質問・共有・解決" },
+        "写真1枚でAIが即座に診断",
+        "全国農薬店マップ3,019件",
+        "農業資材情報・補助事業案内・計算機",
+        "植物直取引・園芸クラス・コミュニティ",
       ],
+      tags: ["🇰🇷 韓国", "農業従事者", "家庭菜園", "観葉植物"],
       cta: "kFarmAIを開く",
     },
     about: {
-      eyebrow: "About",
-      title: "データと現場をつなぐブランド",
+      eyebrow: "About DGI Link",
+      title: "データと現場を\nつなぐブランド",
       desc:
-        "DGI Linkは単なるアプリブランドではありません。現場で繰り返される不便を見つけ、情報を整理し、技術をつなぐことで、人々がより大切なことに集中できるようにします。",
+        "私たちはアプリを作る会社ではありません。\n現場の不便さをAIでつなぎ、人の時間を取り戻すブランドです。",
       meaning: [
-        { k: "Data", v: "散らばった情報を構造化。" },
-        { k: "Green", v: "農業と現場の課題を理解。" },
-        { k: "Intelligence", v: "AIを実用的な道具に。" },
-        { k: "Link", v: "人と情報、課題と解決をつなぐ。" },
+        { k: "Data", v: "散らばった情報を集め、構造化します" },
+        { k: "Green", v: "農業・植物・環境、現場を理解します" },
+        { k: "Intelligence", v: "AIを実用的なツールに変えます" },
+        { k: "Link", v: "人と情報、問題と解決をつなぎます" },
       ],
     },
     story: {
       eyebrow: "Brand Story",
-      quote: "世界に足りないのは情報ではなく、つながりです。",
-      p1: "名刺は財布や引き出しに残り、大切な約束は忘れられます。",
-      p2: "農業や植物の情報はあちこちに散らばり、答えを探すのが難しい。",
-      p3: "DGI Linkは、こうした散らばった情報と人を1つの流れにつなぎます。",
+      quote: "世界に情報が足りないのではありません。\nただ、つながっていないだけです。",
+      p1: "今日も誰かと出会いました。\n会議で、展示会で、取引先で。\n名刺を交わし握手をしましたが、\nその出会いは財布の中の名刺1枚で終わりました。",
+      p2: "農家の方は今日も作物の異変に気づきました。\n何時間も検索しましたが、\n答えが見つかりませんでした。",
+      p3: "DGI Linkはこの問題を解決するために生まれました。\n現場の不便さをデータで整理し、\nAIでつなぎ、\n人の時間とチャンスを取り戻します。",
     },
     flow: {
       eyebrow: "How we connect",
@@ -317,16 +329,21 @@ const T = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "つなげたい話がありますか？",
-      desc: "提携・お問い合わせ・ご意見をお寄せください。",
+      title: "一緒につくりましょう",
+      desc: "提携・B2B・サービスに関するお問い合わせをお待ちしています。",
       items: [
-        { k: "一般・B2B", v: "提携・プロジェクトを歓迎します。", action: "問い合わせる" },
-        { k: "CardScan AI", v: "Google Playからダウンロード", action: "アプリページ", href: CARDSCAN_URL },
-        { k: "kFarmAI", v: "コミュニティを訪問", action: "サイトを開く", href: KFARM_URL },
+        {
+          k: "お問い合わせ・提携",
+          v: "コラボレーションのご提案をお待ちしています。",
+          action: "お問い合わせ",
+          href: "mailto:contact@dgilink.com",
+        },
+        { k: "CardScan AI", v: "Google Playでダウンロード", action: "アプリを見る", href: CARDSCAN_URL },
+        { k: "kFarmAI", v: "農業・植物コミュニティを訪問", action: "サイトを開く", href: KFARM_URL },
       ],
     },
     footer: {
-      tagline: "散らばったものを、つなぐ。",
+      tagline: "散らばったものを、つなぎます。",
       sections: "Services",
       privacy: "プライバシー",
       terms: "利用規約",
@@ -474,22 +491,15 @@ function Index() {
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-[color:var(--brand-green)]" />
                 {t.hero.eyebrow}
               </p>
-              <h1 className="mt-5 font-display text-[40px] font-extrabold leading-[1.15] tracking-tight text-[color:var(--navy-deep)] sm:text-[56px] lg:text-[64px]">
+              <h1 className="mt-5 whitespace-pre-line font-display text-[40px] font-extrabold leading-[1.15] tracking-tight text-[color:var(--navy-deep)] sm:text-[56px] lg:text-[64px]">
                 {t.hero.title[0]}
                 <span className="text-[color:var(--brand-cyan)]">
                   {t.hero.title[1]}
                 </span>
                 {t.hero.title[2]}
               </h1>
-              <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:mx-0">
-                <span className="font-bold text-[color:var(--navy-deep)]">DGI</span>
-                <span className="font-bold text-[color:var(--brand-cyan)]"> Link</span>
-                {t.hero.desc[0].replace(/^DGI Link/, "")}
-                {t.hero.desc[1]}
-                <span className="font-semibold text-[color:var(--brand-cyan)]">{t.hero.desc[2]}</span>
-                {t.hero.desc[3]}
-                <span className="font-semibold text-[color:var(--brand-orange)]">{t.hero.desc[4]}</span>
-                {t.hero.desc[5]}
+              <p className="mx-auto mt-6 max-w-xl whitespace-pre-line text-base leading-relaxed text-muted-foreground sm:text-lg lg:mx-0">
+                {t.hero.desc}
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
                 <a
@@ -573,13 +583,13 @@ function Index() {
             </p>
             <blockquote
               data-reveal
-              className="dgi-reveal mx-auto mt-4 max-w-3xl font-display text-[28px] font-bold leading-[1.3] tracking-tight text-[color:var(--navy-deep)] sm:text-[40px]"
+              className="dgi-reveal mx-auto mt-4 max-w-3xl whitespace-pre-line font-display text-[28px] font-bold leading-[1.3] tracking-tight text-[color:var(--navy-deep)] sm:text-[40px]"
             >
               <span className="text-[color:var(--brand-green)]">“</span>
               {t.story.quote}
               <span className="text-[color:var(--brand-green)]">”</span>
             </blockquote>
-            <div data-reveal className="dgi-reveal mx-auto mt-8 max-w-2xl space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+            <div data-reveal className="dgi-reveal mx-auto mt-8 max-w-2xl space-y-4 whitespace-pre-line text-base leading-relaxed text-muted-foreground sm:text-lg">
               <p>{t.story.p1}</p>
               <p>{t.story.p2}</p>
               <p className="font-medium text-[color:var(--navy)]">{t.story.p3}</p>
@@ -642,8 +652,8 @@ function Index() {
                 <div>
                   <div className="font-semibold text-[color:var(--navy-deep)]">Legal</div>
                   <ul className="mt-3 space-y-2 text-muted-foreground">
-                    <li><a className="hover:text-[color:var(--navy)]" href="#">{t.footer.privacy}</a></li>
-                    <li><a className="hover:text-[color:var(--navy)]" href="#">{t.footer.terms}</a></li>
+                    <li><a className="hover:text-[color:var(--navy)]" href="/privacy.html">{t.footer.privacy}</a></li>
+                    <li><a className="hover:text-[color:var(--navy)]" href="/terms.html">{t.footer.terms}</a></li>
                   </ul>
                 </div>
                 <div>
@@ -655,7 +665,7 @@ function Index() {
               </div>
             </div>
             <div className="mt-10 flex flex-col items-start justify-between gap-2 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
-              <div>© 2026 DGI Link. {t.footer.rights}</div>
+              <div>© 2026 DGI Link (디지아이링크). All rights reserved.</div>
               <div>Data · Green · Intelligence · Link</div>
             </div>
           </div>
@@ -751,11 +761,11 @@ function SectionHeader({ eyebrow, title, desc }: { eyebrow: string; title: strin
       <p data-reveal className="dgi-reveal text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-green)]">
         {eyebrow}
       </p>
-      <h2 data-reveal className="dgi-reveal mt-3 font-display text-[28px] font-bold leading-tight tracking-tight text-[color:var(--navy-deep)] sm:text-[40px]">
+      <h2 data-reveal className="dgi-reveal mt-3 whitespace-pre-line font-display text-[28px] font-bold leading-tight tracking-tight text-[color:var(--navy-deep)] sm:text-[40px]">
         {title}
       </h2>
       {desc && (
-        <p data-reveal className="dgi-reveal mt-4 text-base text-muted-foreground sm:text-lg">
+        <p data-reveal className="dgi-reveal mt-4 whitespace-pre-line text-base text-muted-foreground sm:text-lg">
           {desc}
         </p>
       )}
@@ -901,16 +911,26 @@ function CardScanCard({ t }: { t: typeof T[Lang]["cardscan"] }) {
       </div>
 
       <p className="relative mt-5 text-[15px] font-medium leading-snug text-[color:var(--navy-deep)]">{t.tagline}</p>
-      <p className="relative mt-2 text-sm leading-relaxed text-muted-foreground">{t.desc}</p>
+      <p className="relative mt-2 whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{t.desc}</p>
 
       <ul className="relative mt-6 grid grid-cols-2 gap-3">
         {t.features.map((f) => (
-          <li key={f.t} className="rounded-xl border border-[rgba(15,45,104,0.10)] bg-white/70 p-3">
-            <div className="text-[13px] font-semibold text-[color:var(--navy-deep)]">{f.t}</div>
-            <div className="mt-1 text-xs text-muted-foreground">{f.d}</div>
+          <li key={f} className="rounded-xl border border-[rgba(15,45,104,0.10)] bg-white/70 p-3">
+            <div className="text-[13px] font-semibold text-[color:var(--navy-deep)]">{f}</div>
           </li>
         ))}
       </ul>
+
+      <div className="relative mt-4 flex flex-wrap gap-2">
+        {t.tags.map((tag) => (
+          <span
+            key={tag}
+            className="rounded-full border border-[rgba(15,45,104,0.12)] bg-white/60 px-2.5 py-1 text-[11px] font-medium text-[color:var(--navy)]/70"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
 
       <div className="relative mt-6 flex flex-wrap gap-2.5">
         <a
@@ -979,16 +999,26 @@ function KFarmCard({ t }: { t: typeof T[Lang]["kfarm"] }) {
       </div>
 
       <p className="relative mt-5 text-[15px] font-medium leading-snug text-[color:var(--navy-deep)]">{t.tagline}</p>
-      <p className="relative mt-2 text-sm leading-relaxed text-muted-foreground">{t.desc}</p>
+      <p className="relative mt-2 whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{t.desc}</p>
 
       <ul className="relative mt-6 grid grid-cols-2 gap-3">
         {t.features.map((f) => (
-          <li key={f.t} className="rounded-xl border border-border bg-[color:var(--background)] p-3">
-            <div className="text-[13px] font-semibold text-[color:var(--navy-deep)]">{f.t}</div>
-            <div className="mt-1 text-xs text-muted-foreground">{f.d}</div>
+          <li key={f} className="rounded-xl border border-border bg-[color:var(--background)] p-3">
+            <div className="text-[13px] font-semibold text-[color:var(--navy-deep)]">{f}</div>
           </li>
         ))}
       </ul>
+
+      <div className="relative mt-4 flex flex-wrap gap-2">
+        {t.tags.map((tag) => (
+          <span
+            key={tag}
+            className="rounded-full border border-border bg-[color:var(--background)] px-2.5 py-1 text-[11px] font-medium text-muted-foreground"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
 
       <div className="relative mt-6">
         <a
@@ -1072,7 +1102,7 @@ function ContactCard({
       {inner}
     </a>
   ) : (
-    <a data-reveal className="dgi-reveal block" href="mailto:hello@dgilink.com" aria-label={`${k} — ${action}`}>
+    <a data-reveal className="dgi-reveal block" href="mailto:contact@dgilink.com" aria-label={`${k} — ${action}`}>
       {inner}
     </a>
   );
