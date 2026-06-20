@@ -561,19 +561,19 @@ function Index() {
 
         {/* STORY */}
         <section className="relative py-20 sm:py-28">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
             <p data-reveal className="dgi-reveal text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-green)]">
               {t.story.eyebrow}
             </p>
             <blockquote
               data-reveal
-              className="dgi-reveal mt-4 font-display text-[28px] font-bold leading-[1.3] tracking-tight text-[color:var(--navy-deep)] sm:text-[40px]"
+              className="dgi-reveal mx-auto mt-4 max-w-3xl font-display text-[28px] font-bold leading-[1.3] tracking-tight text-[color:var(--navy-deep)] sm:text-[40px]"
             >
               <span className="text-[color:var(--brand-green)]">“</span>
               {t.story.quote}
               <span className="text-[color:var(--brand-green)]">”</span>
             </blockquote>
-            <div data-reveal className="dgi-reveal mt-8 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+            <div data-reveal className="dgi-reveal mx-auto mt-8 max-w-2xl space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
               <p>{t.story.p1}</p>
               <p>{t.story.p2}</p>
               <p className="font-medium text-[color:var(--navy)]">{t.story.p3}</p>
