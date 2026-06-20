@@ -62,7 +62,7 @@ const T = {
     hero: {
       eyebrow: "Data · Green · Intelligence",
       title: ["흩어진 것을\n", "연결", "합니다."] as readonly string[],
-      desc: "DGI Link는 현장의 불편함을 발견하고\n데이터와 AI로 연결해 사람의 시간을 돌려줍니다.",
+      desc: "명함은 지갑에, 식물 정보는 블로그에 흩어집니다.\n찍으면 AI가 연결합니다.",
       ctaPrimary: "서비스 살펴보기",
       ctaSecondary: "브랜드 스토리",
     },
@@ -160,7 +160,7 @@ const T = {
     hero: {
       eyebrow: "Data · Green · Intelligence",
       title: ["Connecting\n", "What's", " Scattered."] as readonly string[],
-      desc: "We find friction in real life, bridge it with AI,\nand give people back their time.",
+      desc: "Business cards pile up. Plant info scatters online.\nSnap once — AI connects everything.",
       ctaPrimary: "View Services",
       ctaSecondary: "Brand Story",
     },
@@ -258,7 +258,7 @@ const T = {
     hero: {
       eyebrow: "Data · Green · Intelligence",
       title: ["散らばったものを、\n", "つなぎ", "ます。"] as readonly string[],
-      desc: "現場の不便さを見つけ、AIでつなぎ、\n人の時間とチャンスを取り戻します。",
+      desc: "名刺は財布に、植物情報はブログに散らばります。\n撮るだけで、AIがつなぎます。",
       ctaPrimary: "サービスを見る",
       ctaSecondary: "ブランドストーリー",
     },
@@ -560,7 +560,13 @@ function Index() {
                         >
                           {m.k[0]}
                         </div>
-                        <div className="font-display text-lg font-bold text-[color:var(--navy-deep)] sm:text-xl">
+                        <div
+                          className={`font-display font-bold text-[color:var(--navy-deep)] ${
+                            m.k === "Intelligence"
+                              ? "whitespace-nowrap text-base sm:text-lg"
+                              : "text-lg sm:text-xl"
+                          }`}
+                        >
                           {m.k}
                         </div>
                       </div>
@@ -962,8 +968,6 @@ function KFarmCard({ t }: { t: typeof T[Lang]["kfarm"] }) {
       data-reveal
       className="dgi-reveal group relative overflow-hidden rounded-3xl border border-border bg-white p-7 shadow-[0_20px_60px_-30px_rgba(54,168,82,0.35)] transition-all hover:-translate-y-1"
     >
-      <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[color:var(--brand-green-soft)]" />
-
       <div className="relative flex items-start gap-4">
         <a
           href={KFARM_URL}
@@ -981,20 +985,7 @@ function KFarmCard({ t }: { t: typeof T[Lang]["kfarm"] }) {
           />
         </a>
         <div className="min-w-0">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-[color:var(--brand-green-soft)] px-2.5 py-1 text-[11px] font-semibold text-[color:var(--brand-green)]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--brand-green)]" />
-            {t.badge}
-          </span>
-          <div className="mt-2 text-xs uppercase tracking-wider text-muted-foreground">{t.type}</div>
-          <a
-            href={KFARM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-1 inline-block font-display text-2xl font-bold tracking-tight text-[color:var(--navy-deep)] hover:text-[color:var(--brand-green)]"
-          >
-            {t.title.replace(/AI$/, "")}
-            <span className="text-[color:var(--brand-orange)]">AI</span>
-          </a>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground">{t.type}</div>
         </div>
       </div>
 
