@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import cardscanIconAsset from "@/assets/cardscanner-icon.png.asset.json";
-import kfarmLogoAsset from "@/assets/kfarmai-logo.png.asset.json";
-import dgiLinkLogoAsset from "@/assets/dgi-link-logo.png.asset.json";
+import cardscanIconUrl from "@/assets/cardscanner-icon.png";
+import kfarmLogoUrl from "@/assets/kfarmai-logo.png";
+import dgiLinkLogoUrl from "@/assets/dgi-link-logo.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -407,7 +407,7 @@ function Index() {
         <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6">
           <a href="#top" className="flex items-center gap-2">
             <img
-              src={dgiLinkLogoAsset.url}
+              src={dgiLinkLogoUrl}
               alt="DGI Link"
               className="block h-12 w-auto sm:h-14"
               loading="eager"
@@ -620,7 +620,7 @@ function Index() {
               <div>
                 <div className="flex items-center gap-2">
                   <img
-                    src={dgiLinkLogoAsset.url}
+                    src={dgiLinkLogoUrl}
                     alt="DGI Link"
                     className="block h-8 w-auto"
                   />
@@ -808,7 +808,7 @@ function ProductShowcase() {
         >
           <div className="mx-auto flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl bg-white p-5 sm:p-6">
             <img
-              src={cardscanIconAsset.url}
+              src={cardscanIconUrl}
               alt="CardScan AI 앱 아이콘"
               width={160}
               height={160}
@@ -834,7 +834,7 @@ function ProductShowcase() {
         >
           <div className="flex aspect-square w-full items-center justify-center rounded-2xl bg-[#DCEBD3] p-3">
             <img
-              src={kfarmLogoAsset.url}
+              src={kfarmLogoUrl}
               alt="kFarmAI logo"
               width={160}
               height={160}
@@ -871,7 +871,7 @@ function CardScanCard({ t }: { t: typeof T[Lang]["cardscan"] }) {
           className="block shrink-0 overflow-hidden rounded-2xl bg-[#08152e] ring-1 ring-[rgba(15,45,104,0.18)] transition-transform hover:-translate-y-0.5"
         >
           <img
-            src={cardscanIconAsset.url}
+            src={cardscanIconUrl}
             alt="CardScan AI 앱 아이콘"
             width={88}
             height={88}
@@ -936,7 +936,7 @@ function KFarmCard({ t }: { t: typeof T[Lang]["kfarm"] }) {
   return (
     <article
       data-reveal
-      className="dgi-reveal group relative overflow-hidden rounded-3xl border border-border bg-white p-7 shadow-[0_20px_60px_-30px_rgba(54,168,82,0.35)] transition-all hover:-translate-y-1"
+      className="dgi-reveal group relative overflow-hidden rounded-3xl border border-border bg-[#f0fdf4] p-7 shadow-[0_20px_60px_-30px_rgba(54,168,82,0.35)] transition-all hover:-translate-y-1"
     >
       <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[color:var(--brand-green-soft)]" />
 
@@ -949,7 +949,7 @@ function KFarmCard({ t }: { t: typeof T[Lang]["kfarm"] }) {
           className="block shrink-0 rounded-2xl border border-border bg-[color:var(--brand-green-soft)] p-2 transition-transform hover:-translate-y-0.5"
         >
           <img
-            src={kfarmLogoAsset.url}
+            src={kfarmLogoUrl}
             alt="kFarmAI logo"
             width={110}
             height={88}
