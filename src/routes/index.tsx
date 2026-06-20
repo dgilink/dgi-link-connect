@@ -832,7 +832,7 @@ function ProductShowcase() {
           className="group animate-dgi-float rounded-3xl border border-border bg-white px-3 py-4 shadow-[0_10px_40px_-20px_rgba(54,168,82,0.45)] transition-all hover:-translate-y-1 hover:border-[color:var(--brand-green)]"
           style={{ animationDelay: "1s" }}
         >
-          <div className="flex aspect-square w-full items-center justify-center rounded-2xl bg-[color:var(--brand-green-soft)] p-3">
+          <div className="flex aspect-square w-full items-center justify-center rounded-2xl bg-[#DCEBD3] p-3">
             <img
               src={kfarmLogoAsset.url}
               alt="kFarmAI logo"
