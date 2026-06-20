@@ -940,7 +940,7 @@ function KFarmCard({ t }: { t: typeof T[Lang]["kfarm"] }) {
   return (
     <article
       data-reveal
-      className="dgi-reveal group relative overflow-hidden rounded-3xl border border-border bg-[#dcfce7] p-7 shadow-[0_20px_60px_-30px_rgba(54,168,82,0.35)] transition-all hover:-translate-y-1"
+      className="dgi-reveal group relative overflow-hidden rounded-3xl border border-border bg-white p-7 shadow-[0_20px_60px_-30px_rgba(54,168,82,0.35)] transition-all hover:-translate-y-1"
     >
       <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[color:var(--brand-green-soft)]" />
 
@@ -950,7 +950,7 @@ function KFarmCard({ t }: { t: typeof T[Lang]["kfarm"] }) {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="kFarmAI 사이트 열기"
-          className="block shrink-0 transition-transform hover:-translate-y-0.5"
+          className="block shrink-0 rounded-2xl border border-border bg-[#dcfce7] p-2 transition-transform hover:-translate-y-0.5"
         >
           <img
             src={kfarmLogoUrl}
