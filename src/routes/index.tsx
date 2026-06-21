@@ -886,7 +886,7 @@ function CardScanCard({ t }: { t: typeof T[Lang]["cardscan"] }) {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="CardScan AI Google Play 페이지 열기"
-          className="block shrink-0 overflow-hidden rounded-2xl bg-[#08152e] ring-1 ring-[rgba(15,45,104,0.18)] transition-transform hover:-translate-y-0.5"
+          className="block shrink-0 overflow-hidden rounded-2xl transition-transform hover:-translate-y-0.5"
         >
           <img
             src={cardscanIconUrl}
