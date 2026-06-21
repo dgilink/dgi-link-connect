@@ -444,6 +444,7 @@ function Index() {
 
           <div className="flex items-center gap-2">
             <LangSwitch lang={lang} onChange={setLang} />
+            <LangDropdown lang={lang} onChange={setLang} />
             <button
               type="button"
               aria-label="Open menu"
@@ -734,7 +735,7 @@ function LogoMark() {
 function LangSwitch({ lang, onChange }: { lang: Lang; onChange: (l: Lang) => void }) {
   const opts: Lang[] = ["ko", "en", "ja"];
   return (
-    <div role="tablist" aria-label="Language" className="flex items-center rounded-full border border-border bg-white p-0.5 text-xs">
+    <div role="tablist" aria-label="Language" className="hidden items-center rounded-full border border-border bg-white p-0.5 text-xs md:flex">
       {opts.map((o) => (
         <button
           key={o}
@@ -748,6 +749,73 @@ function LangSwitch({ lang, onChange }: { lang: Lang; onChange: (l: Lang) => voi
           {o}
         </button>
       ))}
+    </div>
+  );
+}
+
+const LANG_LABELS: Record<Lang, string> = { ko: "한국어", en: "English", ja: "日本語" };
+
+function LangDropdown({ lang, onChange }: { lang: Lang; onChange: (l: Lang) => void }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [open]);
+
+  return (
+    <div ref={ref} className="relative md:hidden">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-haspopup="listbox"
+        className="flex items-center gap-1 rounded-lg px-2 py-1 text-sm font-medium text-[color:var(--navy)] transition-colors hover:text-[color:var(--navy-deep)]"
+      >
+        {LANG_LABELS[lang]}
+        <svg
+          className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      {open && (
+        <div
+          role="listbox"
+          aria-label="Language"
+          className="absolute right-0 top-full z-50 mt-1 min-w-[120px] rounded-xl border border-border bg-white py-1 shadow-lg"
+        >
+          {(Object.entries(LANG_LABELS) as [Lang, string][]).map(([code, label]) => (
+            <button
+              key={code}
+              type="button"
+              role="option"
+              aria-selected={lang === code}
+              onClick={() => {
+                onChange(code);
+                setOpen(false);
+              }}
+              className={`w-full px-4 py-2.5 text-left text-sm transition-colors hover:bg-muted ${
+                lang === code ? "font-medium text-[color:var(--navy)]" : "text-muted-foreground"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
