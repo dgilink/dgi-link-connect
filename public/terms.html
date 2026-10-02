@@ -1,464 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이용약관 | DGI Link</title>
-  <meta name="description" content="DGI Link 이용약관">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #ffffff;
-      --bg2: #f8f9fa;
-      --green: #16a34a;
-      --black: #111111;
-      --gray1: #444444;
-      --gray2: #888888;
-      --border: #e5e7eb;
-      --font-display: 'Space Grotesk', sans-serif;
-      --font-body: 'Inter', sans-serif;
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--black);
-      font-family: var(--font-body);
-      font-size: 15px;
-      line-height: 1.8;
-      -webkit-font-smoothing: antialiased;
-    }
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo {
-      font-family: var(--font-display);
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--black);
-      text-decoration: none;
-    }
-    .nav-back {
-      font-size: 13px;
-      color: var(--gray2);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .nav-back:hover { color: var(--black); }
-    .lang-switch { display: flex; gap: 8px; }
-    .lang-btn {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--gray2);
-      background: none;
-      border: 1px solid var(--border);
-      cursor: pointer;
-      padding: 4px 10px;
-      border-radius: 6px;
-      transition: all 0.2s;
-      font-family: var(--font-body);
-    }
-    .lang-btn.active { color: var(--black); border-color: var(--black); background: #f3f4f6; }
-    .lang-btn:hover { color: var(--black); }
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 120px 24px 80px;
-    }
-    .page-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 12px;
-    }
-    .page-title {
-      font-family: var(--font-display);
-      font-size: clamp(26px, 4vw, 38px);
-      font-weight: 700;
-      letter-spacing: -1px;
-      line-height: 1.2;
-      margin-bottom: 10px;
-      color: var(--black);
-    }
-    .page-date {
-      font-size: 13px;
-      color: var(--gray2);
-      margin-bottom: 48px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--border);
-    }
-    .section { margin-bottom: 44px; }
-    h2 {
-      font-family: var(--font-display);
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--black);
-      margin-bottom: 14px;
-      padding-left: 12px;
-      border-left: 3px solid var(--green);
-    }
-    p { color: var(--gray1); margin-bottom: 12px; line-height: 1.85; }
-    ul { color: var(--gray1); padding-left: 20px; margin-bottom: 12px; }
-    ul li { margin-bottom: 6px; line-height: 1.7; }
-    .info-box {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 12px;
-    }
-    .info-row {
-      display: flex;
-      gap: 16px;
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 14px;
-    }
-    .info-row:last-child { border-bottom: none; }
-    .info-label { color: var(--green); font-weight: 600; min-width: 160px; flex-shrink: 0; }
-    .info-value { color: var(--gray1); }
-    strong { color: var(--black); font-weight: 600; }
-    footer {
-      background: var(--bg2);
-      border-top: 1px solid var(--border);
-      padding: 32px 24px;
-      text-align: center;
-    }
-    .footer-logo { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--black); margin-bottom: 12px; }
-    .footer-links { display: flex; gap: 20px; justify-content: center; list-style: none; margin-bottom: 12px; flex-wrap: wrap; }
-    .footer-links a { font-size: 13px; color: var(--gray2); text-decoration: none; }
-    .footer-links a:hover { color: var(--black); }
-    .footer-copy { font-size: 12px; color: var(--gray2); }
-    .lang-content { display: none; }
-    .lang-content.active { display: block; }
-    @media (max-width: 600px) {
-      .info-row { flex-direction: column; gap: 4px; }
-      .info-label { min-width: unset; }
-    }
-  </style>
-</head>
-<body>
-
-<nav>
-  <a href="index.html" class="nav-logo">DGI Link</a>
-  <div style="display:flex; align-items:center; gap:16px;">
-    <a href="index.html" class="nav-back" id="nav-back">← 홈으로</a>
-    <div class="lang-switch">
-      <button class="lang-btn active" onclick="setLang('ko')">KO</button>
-      <button class="lang-btn" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('ja')">JA</button>
-    </div>
-  </div>
-</nav>
-
-<div class="container">
-
-  <!-- 한국어 -->
-  <div class="lang-content active" id="content-ko">
-    <p class="page-label">Terms of Service</p>
-    <h1 class="page-title">이용약관</h1>
-    <p class="page-date">시행일: 2026년 06월 18일 &nbsp;|&nbsp; 최종 수정일: 2026년 06월 18일</p>
-
-    <div class="section">
-      <h2>제1조 목적</h2>
-      <p>본 약관은 디지아이링크(이하 "회사")가 운영하는 DGI Link, CardScan AI, kFarmAI 서비스의 이용 조건 및 회사와 이용자 간의 권리·의무 관계를 규정합니다.</p>
-    </div>
-
-    <div class="section">
-      <h2>제2조 서비스 내용</h2>
-      <ul>
-        <li><strong>CardScan AI:</strong> 명함 OCR 인식, 연락처 저장, 만남 기록, 후속업무 관리 앱</li>
-        <li><strong>kFarmAI:</strong> 농업·식물 AI 진단 커뮤니티 플랫폼</li>
-        <li><strong>dgilink.com:</strong> 브랜드 홈페이지 및 정보 제공</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>제3조 이용계약 체결</h2>
-      <p>이용자가 약관에 동의하고 서비스에 가입하거나 앱을 다운로드함으로써 이용계약이 체결됩니다. 만 14세 미만은 법정대리인의 동의가 필요합니다.</p>
-    </div>
-
-    <div class="section">
-      <h2>제4조 서비스 이용료 및 결제</h2>
-      <ul>
-        <li>일부 서비스는 무료이며, 프리미엄 기능은 유료입니다.</li>
-        <li>결제는 Stripe(글로벌), 토스페이먼츠(국내)를 통해 처리됩니다.</li>
-        <li>구매 크레딧은 구매일로부터 1년간 유효합니다.</li>
-        <li>구독 서비스는 해지 전까지 자동 갱신됩니다.</li>
-        <li>환불은 관계 법령 및 회사의 환불 정책에 따릅니다.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>제5조 이용자의 의무</h2>
-      <p>이용자는 다음 행위를 하여서는 안 됩니다.</p>
-      <ul>
-        <li>타인의 정보 도용 또는 허위 정보 등록</li>
-        <li>불법 콘텐츠 게시·배포</li>
-        <li>서비스의 무단 복제·배포·상업적 이용</li>
-        <li>서비스 안정적 운영 방해</li>
-        <li>타인의 명예 훼손</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>제6조 서비스 제공의 중단</h2>
-      <p>시스템 점검, 천재지변 등 불가항력적 사유 발생 시 서비스 제공을 일시 중단할 수 있습니다.</p>
-    </div>
-
-    <div class="section">
-      <h2>제7조 지식재산권</h2>
-      <p>서비스 내 모든 콘텐츠·디자인·로고의 지식재산권은 회사에 귀속됩니다. 이용자 생성 콘텐츠의 권리는 이용자에게 있으며, 회사는 서비스 제공 목적으로만 사용합니다.</p>
-    </div>
-
-    <div class="section">
-      <h2>제8조 면책조항</h2>
-      <ul>
-        <li>불가항력으로 인한 서비스 중단에 대해 책임지지 않습니다.</li>
-        <li>AI 진단 결과는 참고용이며 전문가 의견을 대체하지 않습니다.</li>
-        <li>이용자 간 거래에서 발생하는 분쟁은 당사자 간에 해결합니다.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>제9조 분쟁 해결</h2>
-      <p>본 약관은 대한민국 법률에 따르며, 분쟁 발생 시 회사 소재지 관할 법원에서 해결합니다.</p>
-    </div>
-
-    <div class="section">
-      <h2>제10조 사업자 정보</h2>
-      <div class="info-box">
-        <div class="info-row">
-          <span class="info-label">상호명</span>
-          <span class="info-value">디지아이링크</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>웹사이트 이용조건 | DGI Link Corporate Website</title>
+    <meta
+      name="description"
+      content="회사·브랜드·제품·서비스 정보를 제공하는 DGI Link Corporate Website 이용조건"
+    />
+    <link rel="canonical" href="https://dgilink.com/terms.html" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/corporate.css" />
+    <meta property="og:title" content="웹사이트 이용조건 | DGI Link" />
+    <meta property="og:description" content="DGI Link Corporate Website(dgilink.com) 이용조건" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:site_name" content="DGI Link" />
+    <meta property="og:image" content="https://dgilink.com/dgi-link-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="웹사이트 이용조건 | DGI Link" />
+    <meta name="twitter:description" content="DGI Link Corporate Website 이용조건" />
+    <meta name="twitter:image" content="https://dgilink.com/dgi-link-logo.png" />
+    <meta property="og:url" content="https://dgilink.com/terms.html" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="주요 탐색">
+        <a class="logo" href="/">DGI Link</a>
+        <div class="nav-links">
+          <a href="/">Corporate Home</a>
+          <a class="keep" href="/privacy.html">개인정보처리방침</a>
         </div>
-        <div class="info-row">
-          <span class="info-label">대표자</span>
-          <span class="info-value">송성민</span>
+      </nav>
+    </header>
+
+    <main class="page legal-page">
+      <p class="eyebrow">Corporate Website · Terms</p>
+      <h1 class="legal-title">웹사이트 이용조건</h1>
+      <p class="effective-date">
+        개정안 작성일: 2026년 9월 30일 · 최종 검토일: 2026년 10월 2일 · 시행일: 공개 배포 시 별도
+        고지
+      </p>
+
+      <section class="legal-section">
+        <h2>1. 목적</h2>
+        <p>
+          이 이용조건은 디지아이링크(DGI Link, 이하 “회사”)가 운영하는 Corporate Website
+          <strong>dgilink.com</strong>의 이용과 관련하여 회사와 방문자 간 기본 사항을 정합니다.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>2. 웹사이트의 성격과 범위</h2>
+        <p>
+          이 웹사이트는 DGI Link의 회사, 브랜드, 제품, B2B 서비스 및 사업자 정보를 소개하는 공개
+          Corporate Website입니다. 이 웹사이트 자체는 회원가입, 로그인, 결제, 구독, 사용자 콘텐츠
+          게시 또는 중개 서비스를 제공하지 않습니다.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>3. 개별 제품·서비스 정책</h2>
+        <p>
+          CardScan AI, kFarmAI, DGI PICK 및 개별 B2B 서비스에는 서비스의 기능과 거래관계에 맞는 별도
+          약관, 개인정보처리방침, 계약 또는 운영정책이 적용될 수 있습니다. 별도 조건과 이 웹사이트
+          이용조건이 충돌하는 경우 해당 개별 제품·서비스에 대해서는 그 별도 조건이 우선합니다.
+        </p>
+        <p>
+          <a href="https://dgilink.com/legal/terms.html">CardScan AI 전용 서비스 이용약관</a>
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>4. 정보 제공과 변경</h2>
+        <p>
+          회사는 웹사이트 정보의 정확성과 최신성을 유지하기 위해 합리적으로 노력합니다. 제품 기능,
+          외부 사이트, 제공 범위와 일정은 운영 사정에 따라 변경될 수 있으며, 중요한 변경은 가능한
+          범위에서 웹사이트에 반영합니다. 웹사이트의 일반 정보는 별도 계약이나 전문 자문을 대신하지
+          않습니다.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>5. 이용자의 준수사항</h2>
+        <p>방문자는 다음 행위를 해서는 안 됩니다.</p>
+        <ul>
+          <li>관계 법령을 위반하거나 타인의 권리를 침해하는 행위</li>
+          <li>웹사이트의 정상 운영을 방해하거나 보안 취약점을 악용하는 행위</li>
+          <li>출처를 오인하게 하거나 회사·브랜드를 사칭하는 행위</li>
+          <li>자동화 수단으로 서비스에 과도한 부하를 주는 행위</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>6. 지식재산권과 콘텐츠 권리</h2>
+        <ul>
+          <li>
+            회사가 직접 제작하고 권리를 보유한 상호, 로고, 디자인, 문구와 콘텐츠의 권리는 회사 또는
+            정당한 권리자에게 있습니다.
+          </li>
+          <li>이용자가 보유한 콘텐츠의 권리는 해당 이용자 또는 원권리자에게 남습니다.</li>
+          <li>고객이 제공한 자료와 고객 콘텐츠의 권리는 고객 또는 정당한 권리자에게 있습니다.</li>
+          <li>인용·연결된 제3자 콘텐츠와 상표의 권리는 각 권리자에게 있습니다.</li>
+        </ul>
+        <p>
+          별도 허락이나 법적 근거 없이 권리자의 콘텐츠를 복제, 배포, 변형하거나 상업적으로 이용할 수
+          없습니다.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>7. 외부 링크</h2>
+        <p>
+          웹사이트는 Google Play, kFarmAI, DGI PICK 등 외부 웹사이트로 연결될 수 있습니다. 외부
+          서비스는 각 운영자의 약관과 정책에 따라 제공되며, 회사는 통제할 수 없는 외부 사이트의
+          내용, 가용성 또는 처리행위에 대해 보증하지 않습니다.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>8. DGI Realty 운영지원 안내</h2>
+        <p>
+          DGI Realty 운영지원은 공인중개사사무소 대상 웹·AI·매물 데이터·SEO 운영지원 서비스입니다.
+          중개, 중개계약, 중개대상물 광고, 거래조건 결정과 중개보수는 각 개업공인중개사사무소의
+          책임과 권한에 속합니다. DGI Link는 공인중개사, 중개업체, 중개광고 책임자 또는 중개보수
+          수령주체가 아닙니다.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>9. 책임 범위</h2>
+        <p>
+          회사는 고의 또는 과실로 이용자에게 손해를 발생시킨 경우 관계 법령에 따라 책임을
+          부담합니다. 천재지변, 통신망 장애, 외부 서비스 장애 등 회사가 합리적으로 통제하기 어려운
+          사유로 발생한 손해에 대해서는 관계 법령이 허용하는 범위에서 책임이 제한될 수 있습니다. 이
+          조항은 법령상 배제할 수 없는 이용자의 권리를 제한하지 않습니다.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>10. 개인정보</h2>
+        <p>
+          Corporate Website 방문과 이메일 문의 과정에서 처리되는 개인정보에 관한 사항은
+          <a href="/privacy.html">DGI Link Corporate Website 개인정보처리방침</a>에 따릅니다.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>11. 준거법과 분쟁 해결</h2>
+        <p>
+          이 이용조건은 대한민국 법령에 따릅니다. 분쟁이 발생하면 당사자는 상호 협의를 통해
+          해결하도록 노력하며, 협의로 해결되지 않는 경우 민사소송법 등 대한민국 관계 법령이 정하는
+          절차와 관할에 따릅니다.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>12. 사업자 정보와 문의</h2>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr>
+                <th>상호</th>
+                <td>디지아이링크 (DGI Link)</td>
+              </tr>
+              <tr>
+                <th>대표자</th>
+                <td>송성민</td>
+              </tr>
+              <tr>
+                <th>공식 도메인</th>
+                <td>dgilink.com</td>
+              </tr>
+              <tr>
+                <th>통신판매업 신고</th>
+                <td>제 2026-전남순천-7250 호</td>
+              </tr>
+              <tr>
+                <th>이메일</th>
+                <td><a href="mailto:contact@dgilink.com">contact@dgilink.com</a></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="info-row">
-          <span class="info-label">주소</span>
-          <span class="info-value">전라남도 순천시 해룡면 좌야로 150, 701동 506호</span>
+      </section>
+
+      <section class="legal-section">
+        <h2>13. 변경</h2>
+        <p>
+          회사는 관계 법령과 웹사이트 운영 변경을 반영하기 위해 이 이용조건을 개정할 수 있습니다.
+          중요한 변경이 있는 경우 시행일과 주요 변경 내용을 웹사이트를 통해 안내합니다.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <strong>DGI Link</strong>
+          <p>© 2026 디지아이링크. All rights reserved.</p>
         </div>
-        <div class="info-row">
-          <span class="info-label">통신판매업 신고번호</span>
-          <span class="info-value">제 2026-전남순천-7250 호</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">이메일</span>
-          <span class="info-value">contact@dgilink.com</span>
+        <div class="footer-links">
+          <a href="/">홈</a>
+          <a href="/privacy.html">개인정보처리방침</a>
+          <a href="mailto:contact@dgilink.com">문의</a>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- English -->
-  <div class="lang-content" id="content-en">
-    <p class="page-label">Terms of Service</p>
-    <h1 class="page-title">Terms of Service</h1>
-    <p class="page-date">Effective: June 18, 2026 &nbsp;|&nbsp; Last Updated: June 18, 2026</p>
-
-    <div class="section">
-      <h2>1. Purpose</h2>
-      <p>These Terms govern your use of DGI Link, CardScan AI, and kFarmAI services operated by DGI Link (디지아이링크).</p>
-    </div>
-
-    <div class="section">
-      <h2>2. Services</h2>
-      <ul>
-        <li><strong>CardScan AI:</strong> Business card OCR, contact saving, meeting records, follow-up management</li>
-        <li><strong>kFarmAI:</strong> Agriculture and plant AI diagnosis community platform</li>
-        <li><strong>dgilink.com:</strong> Brand website and information</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>3. Account Registration</h2>
-      <p>By registering or downloading our apps, you agree to these Terms. Users under 14 require parental consent.</p>
-    </div>
-
-    <div class="section">
-      <h2>4. Payments and Billing</h2>
-      <ul>
-        <li>Some features are free; premium features require payment.</li>
-        <li>Payments processed via Stripe (global) and TossPayments (Korea).</li>
-        <li>Purchased credits valid for 1 year from purchase date.</li>
-        <li>Subscriptions auto-renew until cancelled.</li>
-        <li>Refunds subject to applicable law and our refund policy.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>5. User Obligations</h2>
-      <p>You agree not to impersonate others, post illegal content, reproduce our services without permission, interfere with service operations, or defame other users.</p>
-    </div>
-
-    <div class="section">
-      <h2>6. Service Interruptions</h2>
-      <p>We may temporarily suspend services for maintenance or force majeure events.</p>
-    </div>
-
-    <div class="section">
-      <h2>7. Intellectual Property</h2>
-      <p>All service content, designs, and logos are owned by DGI Link. User-generated content remains yours; we use it only to provide our services.</p>
-    </div>
-
-    <div class="section">
-      <h2>8. Disclaimer</h2>
-      <ul>
-        <li>We are not liable for interruptions due to force majeure.</li>
-        <li>AI diagnosis results are for reference only and do not replace professional advice.</li>
-        <li>User-to-user transaction disputes must be resolved between the parties.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>9. Governing Law</h2>
-      <p>These Terms are governed by the laws of the Republic of Korea. Disputes shall be resolved in courts of jurisdiction at our registered location.</p>
-    </div>
-
-    <div class="section">
-      <h2>10. Business Information</h2>
-      <div class="info-box">
-        <div class="info-row">
-          <span class="info-label">Company</span>
-          <span class="info-value">DGI Link (디지아이링크)</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Representative</span>
-          <span class="info-value">Seongmin Song</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Address</span>
-          <span class="info-value">701-506, Jwaya-ro 150, Haeryong-myeon, Suncheon-si, Jeollanam-do, Korea</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Mail Order No.</span>
-          <span class="info-value">제 2026-전남순천-7250 호</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Email</span>
-          <span class="info-value">contact@dgilink.com</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 日本語 -->
-  <div class="lang-content" id="content-ja">
-    <p class="page-label">Terms of Service</p>
-    <h1 class="page-title">利用規約</h1>
-    <p class="page-date">施行日：2026年06月18日 &nbsp;|&nbsp; 最終更新：2026年06月18日</p>
-
-    <div class="section">
-      <h2>第1条 目的</h2>
-      <p>本規約は、デジアイリンク（以下「当社」）が運営するDGI Link、CardScan AI、kFarmAIサービスの利用条件を定めます。</p>
-    </div>
-
-    <div class="section">
-      <h2>第2条 サービス内容</h2>
-      <ul>
-        <li><strong>CardScan AI：</strong>名刺OCR、連絡先保存、出会いの記録、フォローアップ管理</li>
-        <li><strong>kFarmAI：</strong>農業・植物AI診断コミュニティプラットフォーム</li>
-        <li><strong>dgilink.com：</strong>ブランドウェブサイト</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>第3条 利用契約</h2>
-      <p>サービスへの登録またはアプリのダウンロードにより本規約に同意したものとみなします。14歳未満は保護者の同意が必要です。</p>
-    </div>
-
-    <div class="section">
-      <h2>第4条 料金および決済</h2>
-      <ul>
-        <li>一部は無料、プレミアム機能は有料です。</li>
-        <li>Stripe（グローバル）およびTossPayments（韓国内）で処理されます。</li>
-        <li>クレジットは購入日から1年間有効です。</li>
-        <li>サブスクリプションは解約まで自動更新されます。</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>第5条 禁止事項</h2>
-      <p>他人の情報の盗用、違法コンテンツの投稿・配布、サービスの無断複製・商業利用、運営妨害、他者の名誉毀損を禁止します。</p>
-    </div>
-
-    <div class="section">
-      <h2>第6条 免責事項</h2>
-      <ul>
-        <li>不可抗力によるサービス中断について責任を負いません。</li>
-        <li>AI診断結果は参考情報であり、専門家の意見に代わりません。</li>
-        <li>利用者間取引の紛争は当事者間で解決するものとします。</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>第7条 準拠法</h2>
-      <p>本規約は大韓民国法律に準拠し、紛争は当社所在地の管轄裁判所で解決します。</p>
-    </div>
-
-    <div class="section">
-      <h2>第8条 事業者情報</h2>
-      <div class="info-box">
-        <div class="info-row">
-          <span class="info-label">社名</span>
-          <span class="info-value">デジアイリンク（DGI Link）</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">代表者</span>
-          <span class="info-value">ソン・ソンミン</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">所在地</span>
-          <span class="info-value">韓国 全羅南道 順天市 海龍面 佐野路 150, 701棟 506号</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">通信販売業届出番号</span>
-          <span class="info-value">제 2026-전남순천-7250 호</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">メール</span>
-          <span class="info-value">contact@dgilink.com</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<footer>
-  <div class="footer-logo">DGI Link</div>
-  <ul class="footer-links">
-    <li><a href="index.html">홈</a></li>
-    <li><a href="privacy.html">개인정보처리방침</a></li>
-    <li><a href="terms.html">이용약관</a></li>
-    <li><a href="mailto:contact@dgilink.com">문의</a></li>
-  </ul>
-  <p class="footer-copy">© 2026 DGI Link (디지아이링크). All rights reserved.</p>
-</footer>
-
-<script>
-  function setLang(lang) {
-    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-    document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
-    document.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
-    document.getElementById('content-' + lang).classList.add('active');
-    const labels = { ko: '← 홈으로', en: '← Back to Home', ja: '← ホームへ' };
-    document.getElementById('nav-back').textContent = labels[lang];
-  }
-</script>
-</body>
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,342 @@
+export type Lang = "ko" | "en" | "ja";
+
+export const languageLabels: Record<Lang, string> = {
+  ko: "한국어",
+  en: "English",
+  ja: "日本語",
+};
+
+export const homeContent = {
+  ko: {
+    nav: {
+      what: "What we do",
+      products: "Products",
+      brands: "Brands",
+      b2b: "B2B",
+      about: "About",
+      contact: "Contact",
+      menu: "메뉴 열기",
+      closeMenu: "메뉴 닫기",
+    },
+    hero: {
+      eyebrow: "Data · Green · Intelligence · Link",
+      title: "흩어진 것을\n연결합니다.",
+      description:
+        "DGI Link는 소프트웨어와 AI, 데이터, 디지털 서비스로 현장의 문제를 구조화하고 사람과 정보, 운영과 다음 행동을 연결합니다.",
+      primary: "사업 영역 보기",
+      secondary: "파트너십 문의",
+      proof: ["AI & Software", "Digital Service", "Operations Support"],
+    },
+    what: {
+      eyebrow: "What DGI Link Does",
+      title: "현장의 문제를 실행 가능한 연결로 바꿉니다",
+      description: "제품을 만들고, 콘텐츠를 운영하며, 사업 현장의 디지털 운영을 지원합니다.",
+      pillars: [
+        { title: "Data", text: "흩어진 정보를 수집하고 쓸 수 있는 구조로 정리합니다." },
+        { title: "Green", text: "농업·식물·생활 현장의 지속 가능한 가능성을 봅니다." },
+        { title: "Intelligence", text: "AI를 실제 업무에 도움이 되는 도구로 적용합니다." },
+        { title: "Link", text: "사람과 정보, 문제와 해결, 운영과 성장을 연결합니다." },
+      ],
+    },
+    products: {
+      eyebrow: "Products",
+      title: "일상의 정보 문제를 해결하는 제품",
+      description: "각 현장에 필요한 기능과 맥락을 제품 경험으로 연결합니다.",
+      label: "DGI Link Product",
+      action: "공식 사이트 방문",
+      cardscan: {
+        tagline: "만남을 다음 행동으로",
+        features: ["AI 명함 스캔", "연락처·만남 기록", "업무 후속관리"],
+        action: "Google Play에서 보기",
+      },
+      kfarm: {
+        tagline: "식물 정보를 한곳으로",
+        features: ["농업·식물 정보", "AI 기반 도구", "사용자 커뮤니티"],
+        action: "kFarmAI 방문하기",
+      },
+    },
+    brands: {
+      eyebrow: "Brands",
+      title: "정보를 고르고 맥락을 더하는 브랜드",
+      description: "DGI Link의 운영 원칙을 독립적인 브랜드 경험으로 확장합니다.",
+      relation: "DGI Link가 직접 운영하는 정보 콘텐츠 브랜드",
+      action: "브랜드 소개 보기",
+      external: "공식 사이트 방문",
+    },
+    b2b: {
+      eyebrow: "B2B Services",
+      title: "전문 사업자의 운영을 돕는 기술 지원",
+      description: "고객의 전문 영역은 존중하고, DGI Link는 디지털 운영에 집중합니다.",
+      scopeLabel: "DGI Link 지원 범위",
+      scope: ["웹 구축·운영", "AI 기반 자료 구조화", "매물 데이터 운영지원", "SEO·기술지원"],
+      responsibilityLabel: "개업공인중개사사무소 책임",
+      responsibility: "중개·계약·광고·거래조건·중개보수",
+      privacy: "고객사 정보와 수행 내용은 공개 동의 없이는 게시하지 않습니다.",
+      action: "운영지원 범위 확인",
+    },
+    about: {
+      eyebrow: "About DGI Link",
+      title: "기술과 운영을 함께 보는 Corporate 브랜드",
+      description:
+        "DGI Link는 제품, 콘텐츠 브랜드, B2B 운영지원을 하나의 방향 아래 운영합니다. 새로운 기술보다 현장에서 실제로 작동하는 연결을 우선합니다.",
+      points: ["현장 중심 문제 정의", "명확한 데이터 구조", "실용적인 AI 적용", "지속 가능한 운영"],
+    },
+    partnership: {
+      eyebrow: "Business · Partnership",
+      title: "함께 연결할 문제를 찾고 있습니다",
+      description: "제품 협력, 콘텐츠 제휴, B2B 운영지원에 관한 제안을 이메일로 보내주세요.",
+      action: "contact@dgilink.com",
+    },
+    business: {
+      eyebrow: "Business Information",
+      title: "공식 운영 정보",
+      description: "DGI Link의 공개 Corporate 운영 정보입니다.",
+      labels: {
+        name: "상호",
+        representative: "대표자",
+        email: "이메일",
+        domain: "공식 도메인",
+        mailOrder: "통신판매업 신고",
+      },
+    },
+    footer: {
+      statement: "사람과 정보, 현장과 기술을 연결합니다.",
+      products: "Products",
+      brands: "Brands",
+      b2b: "B2B Services",
+      legal: "Legal",
+      privacy: "개인정보처리방침",
+      terms: "이용조건",
+      contact: "문의",
+    },
+  },
+  en: {
+    nav: {
+      what: "What we do",
+      products: "Products",
+      brands: "Brands",
+      b2b: "B2B",
+      about: "About",
+      contact: "Contact",
+      menu: "Open menu",
+      closeMenu: "Close menu",
+    },
+    hero: {
+      eyebrow: "Data · Green · Intelligence · Link",
+      title: "We connect\nwhat's scattered.",
+      description:
+        "DGI Link uses software, AI, data, and digital services to structure real-world problems and connect people, information, operations, and next actions.",
+      primary: "Explore our work",
+      secondary: "Discuss a partnership",
+      proof: ["AI & Software", "Digital Service", "Operations Support"],
+    },
+    what: {
+      eyebrow: "What DGI Link Does",
+      title: "Turning field problems into useful connections",
+      description:
+        "We build products, operate content brands, and support digital operations for businesses.",
+      pillars: [
+        {
+          title: "Data",
+          text: "We collect scattered information and organize it for practical use.",
+        },
+        {
+          title: "Green",
+          text: "We explore sustainable possibilities in agriculture, plants, and daily life.",
+        },
+        { title: "Intelligence", text: "We apply AI as a practical tool for real work." },
+        {
+          title: "Link",
+          text: "We connect people with information, problems with solutions, and operations with growth.",
+        },
+      ],
+    },
+    products: {
+      eyebrow: "Products",
+      title: "Products that solve everyday information problems",
+      description: "We connect the right functions and context into focused product experiences.",
+      label: "DGI Link Product",
+      action: "Visit official site",
+      cardscan: {
+        tagline: "Turn meetings into next actions",
+        features: ["AI card scanning", "Contact and meeting records", "Business follow-up"],
+        action: "View on Google Play",
+      },
+      kfarm: {
+        tagline: "Plant information in one place",
+        features: ["Agriculture and plant information", "AI-powered tools", "User community"],
+        action: "Visit kFarmAI",
+      },
+    },
+    brands: {
+      eyebrow: "Brands",
+      title: "A brand that curates information and adds context",
+      description: "We extend DGI Link's operating principles into a distinct brand experience.",
+      relation: "An information-content brand directly operated by DGI Link",
+      action: "View brand profile",
+      external: "Visit official site",
+    },
+    b2b: {
+      eyebrow: "B2B Services",
+      title: "Technology support for professional operators",
+      description: "Clients lead their professional work; DGI Link focuses on digital operations.",
+      scopeLabel: "DGI Link support",
+      scope: [
+        "Web build and operations",
+        "AI-assisted content structuring",
+        "Listing-data operations support",
+        "SEO and technical support",
+      ],
+      responsibilityLabel: "Licensed office responsibility",
+      responsibility: "Brokerage, contracts, advertising, transaction terms, and brokerage fees",
+      privacy:
+        "Client identities and project details remain private unless publication is explicitly approved.",
+      action: "Review service scope",
+    },
+    about: {
+      eyebrow: "About DGI Link",
+      title: "A corporate brand spanning technology and operations",
+      description:
+        "DGI Link operates products, a content brand, and B2B support under one direction. We prioritize connections that work in the field over technology for its own sake.",
+      points: [
+        "Field-first problem definition",
+        "Clear data structures",
+        "Practical AI application",
+        "Sustainable operations",
+      ],
+    },
+    partnership: {
+      eyebrow: "Business · Partnership",
+      title: "Let's find the next problem to connect",
+      description:
+        "Email us about product collaboration, content partnerships, or B2B operations support.",
+      action: "contact@dgilink.com",
+    },
+    business: {
+      eyebrow: "Business Information",
+      title: "Official operator information",
+      description: "Public corporate information for DGI Link.",
+      labels: {
+        name: "Business name",
+        representative: "Representative",
+        email: "Email",
+        domain: "Official domain",
+        mailOrder: "Mail-order registration",
+      },
+    },
+    footer: {
+      statement: "Connecting people and information, fields and technology.",
+      products: "Products",
+      brands: "Brands",
+      b2b: "B2B Services",
+      legal: "Legal",
+      privacy: "Privacy Policy",
+      terms: "Website Terms",
+      contact: "Contact",
+    },
+  },
+  ja: {
+    nav: {
+      what: "事業領域",
+      products: "Products",
+      brands: "Brands",
+      b2b: "B2B",
+      about: "About",
+      contact: "Contact",
+      menu: "メニューを開く",
+      closeMenu: "メニューを閉じる",
+    },
+    hero: {
+      eyebrow: "Data · Green · Intelligence · Link",
+      title: "散らばったものを、\nつなぎます。",
+      description:
+        "DGI Linkはソフトウェア、AI、データ、デジタルサービスを通じて現場の課題を構造化し、人と情報、運用と次の行動をつなぎます。",
+      primary: "事業領域を見る",
+      secondary: "提携について相談",
+      proof: ["AI & Software", "Digital Service", "Operations Support"],
+    },
+    what: {
+      eyebrow: "What DGI Link Does",
+      title: "現場の課題を、実行できるつながりへ",
+      description:
+        "プロダクトをつくり、コンテンツブランドを運営し、事業のデジタル運用を支援します。",
+      pillars: [
+        { title: "Data", text: "散らばった情報を集め、活用できる形に整えます。" },
+        { title: "Green", text: "農業・植物・暮らしの現場にある持続可能な可能性を見つめます。" },
+        { title: "Intelligence", text: "AIを実務に役立つ道具として活用します。" },
+        { title: "Link", text: "人と情報、課題と解決、運用と成長をつなぎます。" },
+      ],
+    },
+    products: {
+      eyebrow: "Products",
+      title: "日常の情報課題を解決するプロダクト",
+      description: "それぞれの現場に必要な機能と文脈を、プロダクト体験につなげます。",
+      label: "DGI Link Product",
+      action: "公式サイトを見る",
+      cardscan: {
+        tagline: "出会いを次の行動へ",
+        features: ["AI名刺スキャン", "連絡先・出会いの記録", "業務フォローアップ"],
+        action: "Google Playで見る",
+      },
+      kfarm: {
+        tagline: "植物情報をひとつの場所に",
+        features: ["農業・植物情報", "AIベースのツール", "ユーザーコミュニティ"],
+        action: "kFarmAIを開く",
+      },
+    },
+    brands: {
+      eyebrow: "Brands",
+      title: "情報を選び、文脈を加えるブランド",
+      description: "DGI Linkの運営方針を、独立したブランド体験へ広げます。",
+      relation: "DGI Linkが直接運営する情報コンテンツブランド",
+      action: "ブランド紹介を見る",
+      external: "公式サイトを見る",
+    },
+    b2b: {
+      eyebrow: "B2B Services",
+      title: "専門事業者の運用を支える技術支援",
+      description: "お客様の専門領域を尊重し、DGI Linkはデジタル運用に集中します。",
+      scopeLabel: "DGI Linkの支援範囲",
+      scope: ["Web構築・運用", "AIによる資料構造化", "物件データ運用支援", "SEO・技術支援"],
+      responsibilityLabel: "開業公認仲介事務所の責任",
+      responsibility: "仲介、契約、広告、取引条件、仲介手数料",
+      privacy: "顧客名と業務内容は、明示的な公開同意がない限り掲載しません。",
+      action: "運用支援の範囲を見る",
+    },
+    about: {
+      eyebrow: "About DGI Link",
+      title: "技術と運用をともに考えるCorporateブランド",
+      description:
+        "DGI Linkはプロダクト、コンテンツブランド、B2B運用支援をひとつの方針で運営します。新しさよりも、現場で実際に機能するつながりを優先します。",
+      points: ["現場中心の課題定義", "明確なデータ構造", "実用的なAI活用", "持続可能な運用"],
+    },
+    partnership: {
+      eyebrow: "Business · Partnership",
+      title: "ともにつなぐ課題を探しています",
+      description: "プロダクト協業、コンテンツ提携、B2B運用支援についてメールでご相談ください。",
+      action: "contact@dgilink.com",
+    },
+    business: {
+      eyebrow: "Business Information",
+      title: "公式運営情報",
+      description: "DGI Linkの公開Corporate運営情報です。",
+      labels: {
+        name: "商号",
+        representative: "代表者",
+        email: "メール",
+        domain: "公式ドメイン",
+        mailOrder: "通信販売業申告",
+      },
+    },
+    footer: {
+      statement: "人と情報、現場と技術をつなぎます。",
+      products: "Products",
+      brands: "Brands",
+      b2b: "B2B Services",
+      legal: "Legal",
+      privacy: "プライバシーポリシー",
+      terms: "利用条件",
+      contact: "お問い合わせ",
+    },
+  },
+} as const;

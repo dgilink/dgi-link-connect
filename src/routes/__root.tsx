@@ -77,33 +77,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "DGI Link | CardScan AI와 kFarmAI" },
-      { name: "description", content: "DGI Link는 명함과 업무 연락처를 관리하는 CardScan AI, 농업·식물 AI 커뮤니티 kFarmAI를 운영합니다." },
-      { name: "keywords", content: "DGI Link, CardScan AI, 명함 스캐너, 업무 연락처, kFarmAI, 농업 AI, 식물 진단, AI 커뮤니티" },
       { name: "author", content: "DGI Link" },
-      { property: "og:title", content: "DGI Link | CardScan AI와 kFarmAI" },
-      { property: "og:description", content: "DGI Link는 명함과 업무 연락처를 관리하는 CardScan AI, 농업·식물 AI 커뮤니티 kFarmAI를 운영합니다." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@dgilink" },
-      { name: "twitter:title", content: "DGI Link | CardScan AI와 kFarmAI" },
-      { name: "twitter:description", content: "DGI Link는 명함과 업무 연락처를 관리하는 CardScan AI, 농업·식물 AI 커뮤니티 kFarmAI를 운영합니다." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/302b55ff-16d3-4981-bbdb-ca5026b171db/id-preview-6d46c8ca--6d920b50-d9fd-49ae-8a55-8aaf1e94c63e.lovable.app-1781946083215.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/302b55ff-16d3-4981-bbdb-ca5026b171db/id-preview-6d46c8ca--6d920b50-d9fd-49ae-8a55-8aaf1e94c63e.lovable.app-1781946083215.png" },
+      { name: "theme-color", content: "#0F2D68" },
+      { property: "og:site_name", content: "DGI Link" },
+      { property: "og:locale", content: "ko_KR" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap",
-      },
-      { rel: "canonical", href: "/" },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      { rel: "manifest", href: "/manifest.webmanifest" },
     ],
   }),
   shellComponent: RootShell,
@@ -114,7 +100,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <head>
         <HeadContent />
       </head>

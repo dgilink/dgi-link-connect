@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DGI Link">
+  <rect width="64" height="64" rx="15" fill="#0F2D68" />
+  <path
+    d="M17 18h12c11 0 18 5 18 14S40 46 29 46H17V18Zm11 20c5 0 9-1 9-6s-4-6-9-6h-2v12h2Z"
+    fill="#fff"
+  />
+  <circle cx="48" cy="17" r="5" fill="#36A852" />
+  <circle cx="48" cy="47" r="5" fill="#FF6B21" />
+  <path d="M48 22v20" stroke="#06B6D4" stroke-width="3" stroke-linecap="round" />
+</svg>

@@ -41,40 +41,42 @@
 
 :root {
   --radius: 0.75rem;
-  --background: #F7F9FC;
-  --foreground: #14213D;
-  --card: #FFFFFF;
-  --card-foreground: #14213D;
-  --popover: #FFFFFF;
-  --popover-foreground: #14213D;
-  --primary: #0F2D68;
-  --primary-foreground: #FFFFFF;
-  --secondary: #ECF1F8;
-  --secondary-foreground: #14213D;
-  --muted: #F1F4F9;
-  --muted-foreground: #64748B;
-  --accent: #06B6D4;
-  --accent-foreground: #FFFFFF;
-  --destructive: #DC2626;
-  --destructive-foreground: #FFFFFF;
-  --border: #E2E8F0;
-  --input: #E2E8F0;
-  --ring: #0F2D68;
+  --background: #f7f9fc;
+  --foreground: #14213d;
+  --card: #ffffff;
+  --card-foreground: #14213d;
+  --popover: #ffffff;
+  --popover-foreground: #14213d;
+  --primary: #0f2d68;
+  --primary-foreground: #ffffff;
+  --secondary: #ecf1f8;
+  --secondary-foreground: #14213d;
+  --muted: #f1f4f9;
+  --muted-foreground: #64748b;
+  --accent: #06b6d4;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #0f2d68;
 
-  --navy: #0F2D68;
-  --navy-deep: #081A3A;
-  --brand-green: #36A852;
-  --brand-green-soft: #ECF8EF;
-  --brand-orange: #FF6B21;
-  --brand-orange-soft: #FFF1E8;
-  --brand-cyan: #06B6D4;
+  --navy: #0f2d68;
+  --navy-deep: #081a3a;
+  --brand-green: #36a852;
+  --brand-green-soft: #ecf8ef;
+  --brand-orange: #ff6b21;
+  --brand-orange-soft: #fff1e8;
+  --brand-cyan: #06b6d4;
 
-  --font-display: "Plus Jakarta Sans", "Noto Sans KR", "Noto Sans JP", system-ui, sans-serif;
-  --font-body: "Inter", "Noto Sans KR", "Noto Sans JP", system-ui, sans-serif;
+  --font-display: "Pretendard", "Noto Sans KR", "Noto Sans JP", "Segoe UI", sans-serif;
+  --font-body: "Pretendard", "Noto Sans KR", "Noto Sans JP", "Segoe UI", sans-serif;
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
+  * {
+    border-color: var(--color-border);
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -84,32 +86,60 @@
     word-break: keep-all;
     overflow-wrap: anywhere;
   }
-  html { scroll-behavior: smooth; }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
 }
 
-@utility font-display { font-family: var(--font-display); }
-@utility font-body { font-family: var(--font-body); }
+@utility font-display {
+  font-family: var(--font-display);
+}
+@utility font-body {
+  font-family: var(--font-body);
+}
 
 @keyframes dgi-fade-up {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 @keyframes dgi-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 @keyframes dgi-dash {
-  to { stroke-dashoffset: -20; }
+  to {
+    stroke-dashoffset: -20;
+  }
 }
 
-@utility animate-dgi-fade-up { animation: dgi-fade-up 0.8s ease-out both; }
-@utility animate-dgi-float { animation: dgi-float 4s ease-in-out infinite; }
+@utility animate-dgi-fade-up {
+  animation: dgi-fade-up 0.8s ease-out both;
+}
+@utility animate-dgi-float {
+  animation: dgi-float 4s ease-in-out infinite;
+}
 
 @utility dgi-reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  opacity: 1;
+  transform: translateY(16px);
+  transition: transform 0.7s ease-out;
 }
 @utility dgi-reveal-in {
   opacity: 1;
@@ -117,5 +147,14 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

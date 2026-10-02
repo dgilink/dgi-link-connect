@@ -1,0 +1,17 @@
+{
+  "name": "DGI Link",
+  "short_name": "DGI Link",
+  "description": "DGI Link Corporate Website",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F9FC",
+  "theme_color": "#0F2D68",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as RealtyIndexRouteImport } from './routes/realty/index'
+import { Route as DgiPickIndexRouteImport } from './routes/dgi-pick/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RealtyIndexRoute = RealtyIndexRouteImport.update({
+  id: '/realty/',
+  path: '/realty/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DgiPickIndexRoute = DgiPickIndexRouteImport.update({
+  id: '/dgi-pick/',
+  path: '/dgi-pick/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/dgi-pick/': typeof DgiPickIndexRoute
+  '/realty/': typeof RealtyIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/dgi-pick': typeof DgiPickIndexRoute
+  '/realty': typeof RealtyIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/dgi-pick/': typeof DgiPickIndexRoute
+  '/realty/': typeof RealtyIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/dgi-pick/' | '/realty/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/dgi-pick' | '/realty'
+  id: '__root__' | '/' | '/dgi-pick/' | '/realty/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DgiPickIndexRoute: typeof DgiPickIndexRoute
+  RealtyIndexRoute: typeof RealtyIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/realty/': {
+      id: '/realty/'
+      path: '/realty'
+      fullPath: '/realty/'
+      preLoaderRoute: typeof RealtyIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dgi-pick/': {
+      id: '/dgi-pick/'
+      path: '/dgi-pick'
+      fullPath: '/dgi-pick/'
+      preLoaderRoute: typeof DgiPickIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DgiPickIndexRoute: DgiPickIndexRoute,
+  RealtyIndexRoute: RealtyIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

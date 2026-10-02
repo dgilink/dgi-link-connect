@@ -13,6 +13,8 @@ export default defineConfig({
     server: { entry: "server" },
     // Prerender every route to static HTML so the build can be hosted on
     // static-only hosts (e.g. GitHub Pages) with no server runtime.
-    prerender: { enabled: true, crawlLinks: true },
+    // Corporate routes are discovered and prerendered automatically. Legal files in public/
+    // are copied directly; link crawling would send those files through the router as 404s.
+    prerender: { enabled: true, crawlLinks: false },
   },
 });
