@@ -1,0 +1,186 @@
+export const designContent = {
+  ko: {
+    brandMessage: "흩어진 것을 연결합니다.",
+    nav: ["서비스", "프로젝트", "회사소개"],
+    contact: "문의하기",
+    explore: "브랜드 살펴보기",
+    intro: "DGI LINK 소개 보기",
+    servicesAction: "주요 서비스 둘러보기",
+    hero: "기술이 현장에서\n더 큰 가치를 만듭니다.",
+    description:
+      "DGI LINK는 데이터와 AI를 연결해 농업, 비즈니스, 부동산, 콘텐츠 등 실제 문제를 해결하는 작지만 정교한 기술기업입니다.",
+    stats: ["서비스·브랜드", "사업 영역", "더 나은 현장을 위해"],
+    visualAlt: "산과 들이 이어지는 아침의 농업 풍경",
+    servicesTitle: "현장의 문제를, 작동하는 서비스로.",
+    servicesShort: "주요 서비스",
+    servicesDescription:
+      "DGI LINK는 다양한 분야의 실제 문제를 해결하는 서비스와 프로젝트를 직접 만들고 운영합니다.",
+    allServices: "운영 정보 보기",
+    details: "자세히 보기",
+    official: "공식 사이트",
+    pickRelation: "DGI PICK은 디지아이링크(DGI Link)가 직접 운영하는 정보 콘텐츠 브랜드입니다.",
+    realtyRole:
+      "DGI Realty는 공인중개사사무소 대상 웹·AI·매물 데이터·SEO 운영지원입니다. 중개·계약·광고·거래조건·중개보수의 책임은 각 개업공인중개사사무소에 있습니다.",
+    cards: [
+      {
+        title: "좋은 정보가\n더 나은 일상을 만듭니다.",
+        short: "좋은 정보가 더 나은 일상을",
+        tags: ["콘텐츠", "미디어", "라이프스타일"],
+      },
+      {
+        title: "전문가의 현장에,\n더 나은 운영을.",
+        short: "웹·AI·데이터 운영지원",
+        tags: ["웹·AI", "매물 데이터", "운영지원"],
+      },
+      {
+        title: "명함이\n기회가 되는 순간.",
+        short: "명함이 기회가 되는 순간",
+        tags: ["업무 앱", "명함 관리", "연락처"],
+      },
+      {
+        title: "AI로 만나는\n더 건강한 농업.",
+        short: "AI로 만나는 더 건강한 농업",
+        tags: ["농업", "식물·AI", "커뮤니티"],
+      },
+    ],
+    projectsTitle: "오늘도 더 나은\n현장을 만들고 있습니다.",
+    projectsShort: "주요 프로젝트",
+    projectsNote: "공개 서비스에서 이어가는 프로젝트",
+    projectDescriptions: [
+      "정보를 고르고, 맥락을 연결합니다",
+      "전문 업무를 돕는 디지털 운영",
+      "만남의 기록을 다음 행동으로",
+      "식물과 사람을 연결하는 플랫폼",
+    ],
+    cta: "함께, 더 나은 가능성을 만듭니다.",
+    ctaDescription: "제휴, B2B, 프로젝트 협업 등 다양한 제안을 기다립니다.",
+    about: "데이터와 기술을, 실제 현장으로.",
+    aboutDescription:
+      "Data · Green · Intelligence · Link. 제품, 콘텐츠 브랜드, B2B 운영지원을 통해 사람과 정보, 문제와 해결을 연결합니다.",
+    business: "사업자 정보",
+    skip: "본문 바로가기",
+  },
+  en: {
+    brandMessage: "Connecting what's scattered.",
+    nav: ["Services", "Projects", "About"],
+    contact: "Contact",
+    explore: "Explore our brands",
+    intro: "About DGI LINK",
+    servicesAction: "Explore our services",
+    hero: "Technology creates\nvalue in the real world.",
+    description:
+      "DGI LINK is a small, focused technology company connecting data and AI to solve real problems in agriculture, business, real-estate operations, and content.",
+    stats: ["Services & brands", "Business areas", "For a better tomorrow"],
+    visualAlt: "Morning light over farmland and mountains",
+    servicesTitle: "Real problems. Working services.",
+    servicesShort: "Our services",
+    servicesDescription:
+      "We build and operate services and projects that solve practical problems across different fields.",
+    allServices: "Operator info",
+    details: "Explore",
+    official: "Official site",
+    pickRelation: "DGI PICK is an information-content brand directly operated by DGI Link.",
+    realtyRole:
+      "DGI Realty provides web, AI, listing-data, and SEO operations support for licensed real-estate offices. Each licensed office is responsible for brokerage, contracts, advertising, transaction terms, and brokerage fees.",
+    cards: [
+      {
+        title: "Better information.\nBetter everyday living.",
+        short: "Better information for everyday life",
+        tags: ["Content", "Media", "Lifestyle"],
+      },
+      {
+        title: "Better operations.\nFor professional teams.",
+        short: "Web, AI & data operations support",
+        tags: ["Web & AI", "Listing data", "Operations"],
+      },
+      {
+        title: "Turn a business card\ninto an opportunity.",
+        short: "Turn contacts into opportunities",
+        tags: ["Business app", "Cards", "Contacts"],
+      },
+      {
+        title: "Healthier agriculture.\nConnected by AI.",
+        short: "Healthier agriculture with AI",
+        tags: ["Agriculture", "Plant AI", "Community"],
+      },
+    ],
+    projectsTitle: "Building a better\nworking world, every day.",
+    projectsShort: "Selected projects",
+    projectsNote: "Projects within our public services",
+    projectDescriptions: [
+      "Curated information, connected context",
+      "Digital support for professional work",
+      "From meeting notes to next actions",
+      "Connecting plants and people",
+    ],
+    cta: "Together, we create new possibilities.",
+    ctaDescription: "Let's talk about partnerships, B2B services, and project collaboration.",
+    about: "Data and technology. Applied to real life.",
+    aboutDescription:
+      "Data · Green · Intelligence · Link. Our products, content brand, and B2B operations support connect people with information and problems with solutions.",
+    business: "Business information",
+    skip: "Skip to content",
+  },
+  ja: {
+    brandMessage: "散らばったものを、つなぎます。",
+    nav: ["サービス", "プロジェクト", "会社紹介"],
+    contact: "お問い合わせ",
+    explore: "ブランドを見る",
+    intro: "DGI LINKについて",
+    servicesAction: "主なサービスを見る",
+    hero: "技術が現場で、\nより大きな価値を生む。",
+    description:
+      "DGI LINKはデータとAIをつなぎ、農業、ビジネス、不動産業務支援、コンテンツなどの課題を解決する、小さく精緻なテクノロジー企業です。",
+    stats: ["サービス・ブランド", "事業領域", "より良い現場のために"],
+    visualAlt: "朝の光に包まれた農地と山々の風景",
+    servicesTitle: "現場の課題を、動くサービスへ。",
+    servicesShort: "主なサービス",
+    servicesDescription:
+      "さまざまな分野の課題を解決するサービスとプロジェクトを、自らつくり運営します。",
+    allServices: "運営情報を見る",
+    details: "詳しく見る",
+    official: "公式サイト",
+    pickRelation:
+      "DGI PICKはディジアイリンク（DGI Link）が直接運営する情報コンテンツブランドです。",
+    realtyRole:
+      "DGI Realtyは公認仲介事務所向けのWeb・AI・物件データ・SEO運用支援です。仲介、契約、広告、取引条件、仲介手数料の責任は各開業公認仲介事務所にあります。",
+    cards: [
+      {
+        title: "良い情報が、\nより良い日常をつくる。",
+        short: "良い情報から、より良い日常へ",
+        tags: ["コンテンツ", "メディア", "暮らし"],
+      },
+      {
+        title: "専門家の現場に、\nより良い運用を。",
+        short: "Web・AI・データ運用支援",
+        tags: ["Web・AI", "物件データ", "運用支援"],
+      },
+      {
+        title: "名刺が、\nチャンスに変わる瞬間。",
+        short: "名刺がチャンスに変わる瞬間",
+        tags: ["業務アプリ", "名刺管理", "連絡先"],
+      },
+      {
+        title: "AIと出会う、\nより健やかな農業。",
+        short: "AIでつながる、健やかな農業",
+        tags: ["農業", "植物・AI", "コミュニティ"],
+      },
+    ],
+    projectsTitle: "今日も、より良い\n現場をつくっています。",
+    projectsShort: "主なプロジェクト",
+    projectsNote: "公開サービスで進めるプロジェクト",
+    projectDescriptions: [
+      "情報を選び、文脈をつなぐ",
+      "専門業務を支えるデジタル運用",
+      "出会いの記録を次の行動へ",
+      "植物と人をつなぐプラットフォーム",
+    ],
+    cta: "ともに、より良い可能性をつくる。",
+    ctaDescription: "提携、B2B、プロジェクト協業についてご相談ください。",
+    about: "データと技術を、実際の現場へ。",
+    aboutDescription:
+      "Data · Green · Intelligence · Link。プロダクト、コンテンツブランド、B2B運用支援を通じて、人と情報、課題と解決をつなぎます。",
+    business: "事業者情報",
+    skip: "本文へ移動",
+  },
+} as const;

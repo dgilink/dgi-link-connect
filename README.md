@@ -55,3 +55,13 @@ No-New-Regression 원칙을 사용합니다.
 - 검증 로그는 내부에서 조용히 확인하고 최종 요약만 공유합니다.
 
 상세 인수인계는 `docs/DGI_LINK_CORPORATE_WEB_V2_HANDOFF_20260930.md`를 참고하세요.
+
+## Approved V2 design
+
+승인 시안에 맞춘 HOME은 `src/components/corporate-home.tsx`와 범위가 제한된
+`src/corporate-home.css`에서 구현합니다. 새 시안의 KO/EN/JA 문구는 `src/content/design.ts`에
+있습니다. 기존 서비스 registry, route metadata, 상세페이지, Corporate Legal은 유지합니다.
+
+디자인 보드 원본은 로컬 `docs/design-reference/`에 보관하고 Git과 공개 build에서 제외합니다.
+공개 가능한 실제 구현 스크린샷 및 시안과의 비교, 자산 출처, 검증 범위는
+[디자인 구현 인수인계](docs/DGI_LINK_WEB_V2_DESIGN_PARITY.md)를 참고하세요.
