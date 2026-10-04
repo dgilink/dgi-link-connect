@@ -30,3 +30,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local approved design boards contain non-public project identities.
+# Keep them available for parity review without publishing them in this public repository.
+docs/design-reference/*.png
