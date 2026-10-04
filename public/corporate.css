@@ -283,6 +283,12 @@ h1 {
 
 .legal-page {
   max-width: 860px;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.legal-page a[href="mailto:contact@dgilink.com"] {
+  white-space: nowrap;
 }
 
 .legal-title {
@@ -440,5 +446,48 @@ th {
   th,
   td {
     min-width: 130px;
+  }
+}
+
+@media (width < 768px) {
+  .legal-page .legal-section {
+    padding: 20px 16px;
+  }
+
+  .legal-page .table-wrap {
+    margin-bottom: 16px;
+  }
+
+  .legal-page .table-wrap:last-child {
+    margin-bottom: 0;
+  }
+
+  .legal-page table,
+  .legal-page tbody,
+  .legal-page tr,
+  .legal-page th,
+  .legal-page td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .legal-page tr {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .legal-page tr:first-child {
+    padding-top: 0;
+  }
+
+  .legal-page th,
+  .legal-page td {
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  .legal-page th {
+    padding-bottom: 4px;
   }
 }
