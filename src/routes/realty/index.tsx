@@ -93,8 +93,11 @@ function RealtyPage() {
               }
               rows={[
                 { label: "운영사업자", value: "디지아이링크 (DGI Link)" },
+                { label: "대표자", value: "송성민" },
+                { label: "사업자등록번호", value: "657-75-00575" },
                 { label: "서비스 유형", value: "디지털 운영지원" },
                 { label: "대상", value: "개업공인중개사사무소" },
+                { label: "카카오톡 채널", value: "DGI Realty 운영지원" },
                 { label: "문의", value: "contact@dgilink.com" },
               ]}
             />
